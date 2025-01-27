@@ -80,8 +80,7 @@ def train_epoch(epoch, wandb):
 
         if step % args.log_interval == 0:
             spend_time = time.time() - start_time
-            Logger(
-                'Epoch:[{}/{}]({}/{}) loss:{:.3f} lr:{:.7f} epoch_Time:{}min:'.format(
+            _log = ('Epoch:[{}/{}]({}/{}) loss:{:.3f} lr:{:.7f} epoch_Time:{}min:'.format(
                     epoch,
                     args.epochs,
                     step,
@@ -89,6 +88,8 @@ def train_epoch(epoch, wandb):
                     loss.item() * args.accumulation_steps,
                     optimizer.param_groups[-1]['lr'],
                     spend_time / (step + 1) * iter_per_epoch // 60 - spend_time // 60))
+            logger.info(_log)
+            Logger(_log)
 
             if (wandb is not None) and (not ddp or dist.get_rank() == 0):
                 wandb.log({"loss": loss.item() * args.accumulation_steps,
@@ -105,7 +106,9 @@ def train_epoch(epoch, wandb):
             else:
                 state_dict = model.state_dict()
 
+            logger.info('Save checkpoint to %s', ckp)
             torch.save(state_dict, ckp)
+            logger.info('Model train..')
             model.train()
 
 
@@ -219,3 +222,6 @@ if __name__ == "__main__":
     iter_per_epoch = len(train_loader)
     for epoch in range(args.epochs):
         train_epoch(epoch, wandb)
+        # 训练 1 个 epoch 后自动关机
+        time.sleep(60)
+        os.system("/usr/bin/shutdown")
