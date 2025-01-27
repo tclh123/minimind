@@ -1,4 +1,5 @@
 import os
+import logging
 import platform
 import argparse
 import time
@@ -16,8 +17,14 @@ from contextlib import nullcontext
 
 from transformers import AutoTokenizer
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)s %(levelname)s %(message)s')
+
+logger.info('Importing: from model.model import Transformer')
 from model.model import Transformer
+logger.info('Importing: from model.LMConfig import LMConfig')
 from model.LMConfig import LMConfig
+logger.info('Importing: from model.dataset import PretrainDataset')
 from model.dataset import PretrainDataset
 
 warnings.filterwarnings('ignore')
@@ -106,8 +113,10 @@ def init_model():
     def count_parameters(model):
         return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
+    logger.info('init tokenizer')
     tokenizer = AutoTokenizer.from_pretrained('./model/minimind_tokenizer')
 
+    logger.info('init model')
     model = Transformer(lm_config).to(args.device)
     # moe_path = '_moe' if lm_config.use_moe else ''
 
@@ -150,6 +159,7 @@ if __name__ == "__main__":
     parser.add_argument('--local_rank', type=int, default=-1, help='local rank for distributed training')
 
     args = parser.parse_args()
+    logger.info('Run with args: %s', args)
 
     lm_config = LMConfig()
     max_seq_len = lm_config.max_seq_len
@@ -178,6 +188,8 @@ if __name__ == "__main__":
         wandb = None
 
     model, tokenizer = init_model()
+
+    logger.info('Read PretrainDataset csv %s', args.data_path)
     df = pd.read_csv(args.data_path)
     df = df.sample(frac=1.0)
     train_ds = PretrainDataset(df, tokenizer, max_length=max_seq_len)

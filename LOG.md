@@ -117,6 +117,20 @@ print(torch.cuda.is_available())
 
 `python 1-pretrain.py` 执行预训练，得到 `pretrain_*.pth` 作为预训练的输出权重
 
+先尝试下无 GPU 卡执行，在 Load ./dataset/pretrain_data.csv 时被 OOM killed。
+```
+python 1-pretrain.py
+2025-01-28 01:33:07,459 __main__ INFO Importing: from model.model import Transformer
+2025-01-28 01:33:08,378 __main__ INFO Importing: from model.LMConfig import LMConfig
+2025-01-28 01:33:08,378 __main__ INFO Importing: from model.dataset import PretrainDataset
+2025-01-28 01:33:09,245 __main__ INFO Run with args: Namespace(out_dir='out', epochs=20, batch_size=64, learning_rate=0.0002, device='cpu', dtype='bfloat16', use_wandb=False, wandb_project='MiniMind-Pretrain', num_workers=1, data_path='./dataset/pretrain_data.csv', ddp=False, accumulation_steps=8, grad_clip=1.0, warmup_iters=0, log_interval=100, save_interval=1000, local_rank=-1)
+2025-01-28 01:33:09,246 __main__ INFO init tokenizer
+2025-01-28 01:33:09,252 __main__ INFO init model
+LLM总参数量：26.878 百万
+2025-01-28 01:33:10,054 __main__ INFO Read PretrainDataset csv ./dataset/pretrain_data.csv
+Killed
+```
+
 # 总体步骤
 
 > 2.4 python 1-pretrain.py 执行预训练，得到 pretrain_*.pth 作为预训练的输出权重
