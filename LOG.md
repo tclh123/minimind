@@ -53,6 +53,10 @@ sft_data_single.csv:  30%|██████████████████
 https://www.modelscope.cn/datasets/deepctrl/deepctrl-sft-data/files
 sft_data_zh.jsonl 17.19GB
 
+`wget "https://www.modelscope.cn/datasets/deepctrl/deepctrl-sft-data/resolve/master/sft_data_zh.jsonl"`，太大了，可以暂时先不下载。直接使用分离好（且截断数据到 512）的数据 `sft_data_single.csv`。
+
+同理，处理好的供预训练的数据 pretrain_data.csv。
+
 
 https://huggingface.co/datasets/jingyaogong/minimind_dataset/tree/main
 
