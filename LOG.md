@@ -93,3 +93,35 @@ total 416K
 -rw-r--r-- 1 root root 1.6K Jan 27 23:40 tokenizer_config.json
 -rw-r--r-- 1 root root 256K Jan 27 23:40 tokenizer.json
 -rw-r--r-- 1 root root  57K Jan 27 23:40 merges.txt
+
+```shell
+$ python data_process.py
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+0it [00:00, ?it/s]
+tokenizer词表大小： 6400
+```
+
+# pretrain
+
+## 环境测试
+测试torch是否可用cuda
+
+```
+import torch
+print(torch.cuda.is_available())
+```
+
+## 调整参数
+`./model/LMConfig.py`
+> dim和n_layers参数为(512+8)
+
+`python 1-pretrain.py` 执行预训练，得到 `pretrain_*.pth` 作为预训练的输出权重
+
+# 总体步骤
+
+> 2.4 python 1-pretrain.py 执行预训练，得到 pretrain_*.pth 作为预训练的输出权重
+> 2.5 python 3-full_sft.py 执行指令微调，得到 full_sft_*.pth 作为指令微调的输出权重
+> 2.6 python 4-lora_sft.py 执行lora微调（非必须）
+> 2.7 python 5-dpo_train.py 执行DPO人类偏好强化学习对齐（非必须）
+
+

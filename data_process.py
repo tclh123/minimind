@@ -147,7 +147,8 @@ if __name__ == "__main__":
     # 2: sft
     # 3: RL
     ################
-    process_type = 2
+    process_type = None
+    # process_type = 2
 
     if process_type == 1:
         pretrain_process()
