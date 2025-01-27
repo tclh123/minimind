@@ -135,6 +135,79 @@ LLM总参数量：26.878 百万
 Killed
 ```
 
+2张 4090D
+
+```
+$ nvidia-smi
+Tue Jan 28 02:05:18 2025
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.78                 Driver Version: 550.78         CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090 D      On  |   00000000:17:00.0 Off |                  Off |
+| 68%   63C    P2            324W /  425W |   11573MiB /  24564MiB |    100%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 4090 D      On  |   00000000:98:00.0 Off |                  Off |
+| 31%   52C    P2            303W /  425W |   11573MiB /  24564MiB |    100%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
++-----------------------------------------------------------------------------------------+
+```
+
+```
+2025-01-28 02:02:25,933 __main__ INFO Importing: from model.model import Transformer
+2025-01-28 02:02:26,243 __main__ INFO Importing: from model.LMConfig import LMConfig
+2025-01-28 02:02:26,243 __main__ INFO Importing: from model.dataset import PretrainDataset
+2025-01-28 02:02:26,290 __main__ INFO Importing: from model.model import Transformer
+2025-01-28 02:02:26,670 __main__ INFO Run with args: Namespace(out_dir='out', epochs=20, batch_size=64, learning_rate=0.0002, device='cuda:0', dtype='bfloat16', use_wandb=False, wandb_project='MiniMind-Pretrain', num_workers=1, data_path='./dataset/pretrain_data.csv', ddp=False, accumulation_steps=8, grad_clip=1.0, warmup_iters=0, log_interval=100, save_interval=1000, local_rank=-1)
+2025-01-28 02:02:26,767 __main__ INFO Importing: from model.LMConfig import LMConfig
+2025-01-28 02:02:26,767 __main__ INFO Importing: from model.dataset import PretrainDataset
+2025-01-28 02:02:26,819 __main__ INFO init tokenizer
+2025-01-28 02:02:26,825 __main__ INFO init model
+2025-01-28 02:02:27,258 __main__ INFO Read PretrainDataset csv ./dataset/pretrain_data.csv
+2025-01-28 02:02:27,327 __main__ INFO Run with args: Namespace(out_dir='out', epochs=20, batch_size=64, learning_rate=0.0002, device='cuda:0', dtype='bfloat16', use_wandb=False, wandb_project='MiniMind-Pretrain', num_workers=1, data_path='./dataset/pretrain_data.csv', ddp=False, accumulation_steps=8, grad_clip=1.0, warmup_iters=0, log_interval=100, save_interval=1000, local_rank=-1)
+2025-01-28 02:02:27,355 __main__ INFO init tokenizer
+2025-01-28 02:02:27,364 __main__ INFO init model
+LLM总参数量：26.878 百万
+2025-01-28 02:02:27,901 __main__ INFO Read PretrainDataset csv ./dataset/pretrain_data.csv
+2025-01-28 02:03:09,925 __main__ INFO Epoch:[0/20](0/41914) loss:8.879 lr:0.0002000 epoch_Time:763.0min:
+2025-01-28 02:03:09,926 __main__ INFO Epoch:[0/20](0/41914) loss:8.875 lr:0.0002000 epoch_Time:849.0min:
+Epoch:[0/20](0/41914) loss:8.875 lr:0.0002000 epoch_Time:849.0min:
+2025-01-28 02:03:24,226 __main__ INFO Epoch:[0/20](100/41914) loss:7.435 lr:0.0002000 epoch_Time:106.0min:
+2025-01-28 02:03:24,226 __main__ INFO Epoch:[0/20](100/41914) loss:7.442 lr:0.0002000 epoch_Time:106.0min:
+Epoch:[0/20](100/41914) loss:7.435 lr:0.0002000 epoch_Time:106.0min:
+2025-01-28 02:03:38,403 __main__ INFO Epoch:[0/20](200/41914) loss:6.916 lr:0.0002000 epoch_Time:102.0min:
+2025-01-28 02:03:38,403 __main__ INFO Epoch:[0/20](200/41914) loss:6.912 lr:0.0002000 epoch_Time:102.0min:
+Epoch:[0/20](200/41914) loss:6.916 lr:0.0002000 epoch_Time:102.0min:
+2025-01-28 02:03:52,590 __main__ INFO Epoch:[0/20](300/41914) loss:6.491 lr:0.0002000 epoch_Time:101.0min:
+Epoch:[0/20](300/41914) loss:6.491 lr:0.0002000 epoch_Time:101.0min:
+2025-01-28 02:03:52,590 __main__ INFO Epoch:[0/20](300/41914) loss:6.504 lr:0.0002000 epoch_Time:101.0min:
+2025-01-28 02:04:06,779 __main__ INFO Epoch:[0/20](400/41914) loss:6.083 lr:0.0002000 epoch_Time:101.0min:
+2025-01-28 02:04:06,779 __main__ INFO Epoch:[0/20](400/41914) loss:6.148 lr:0.0002000 epoch_Time:101.0min:
+Epoch:[0/20](400/41914) loss:6.083 lr:0.0002000 epoch_Time:101.0min:
+2025-01-28 02:04:20,965 __main__ INFO Epoch:[0/20](500/41914) loss:5.718 lr:0.0002000 epoch_Time:99.0min:
+2025-01-28 02:04:20,965 __main__ INFO Epoch:[0/20](500/41914) loss:5.682 lr:0.0002000 epoch_Time:99.0min:
+Epoch:[0/20](500/41914) loss:5.682 lr:0.0002000 epoch_Time:99.0min:
+...
+```
+
+checkpoint 产出
+
+```
+ls -lhtr out/pretrain_512.pth
+-rw-r--r-- 1 root root 103M Jan 28 02:05 out/pretrain_512.pth
+```
+
 # 总体步骤
 
 > 2.4 python 1-pretrain.py 执行预训练，得到 pretrain_*.pth 作为预训练的输出权重

@@ -1,7 +1,7 @@
 # /model/__pycache__
 /dataset
 # /wandb
-# /out
+/out
 
 *.swp
 __pycache__/
