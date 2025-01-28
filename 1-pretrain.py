@@ -61,18 +61,31 @@ def train_epoch(epoch, wandb):
         for param_group in optimizer.param_groups:
             param_group['lr'] = lr
 
+        # Runs the forward pass with autocasting.
+        # 使用混合精度 torch.cuda.amp.autocast()
         with ctx:
+            # 前向传播，计算输出
             out = model(X, Y)
             loss = out.last_loss / args.accumulation_steps
             loss_mask = loss_mask.view(-1)
             loss = torch.sum(loss * loss_mask) / loss_mask.sum()
 
+        # 反向传播，计算梯度
         scaler.scale(loss).backward()
 
         if (step + 1) % args.accumulation_steps == 0:
+            # TODO: model.parameters()
+            # 反缩放梯度
+            # Unscales the gradients of optimizer's assigned params in-place
             scaler.unscale_(optimizer)
+            # Since the gradients of optimizer's assigned params are unscaled, clips as usual:
+            # 归一化 裁剪 max_norm = args.grad_clip = 1.0
             torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)
 
+            # optimizer's gradients are already unscaled, so scaler.step does not unscale them,
+            # although it still skips optimizer.step() if the gradients contain infs or NaNs.
+            # 更新模型参数
+            # scaler 记录了此迭代中是否已为该优化器调用了 scaler.unscale_(optimizer)，因此 scaler.step(optimizer) 知道在（内部）调用 optimizer.step() 之前不要冗余地反缩放梯度。
             scaler.step(optimizer)
             scaler.update()
 
@@ -193,6 +206,7 @@ if __name__ == "__main__":
 
     args.wandb_run_name = f"MiniMind-Pretrain-Epoch-{args.epochs}-BatchSize-{args.batch_size}-LearningRate-{args.learning_rate}"
 
+    # gpu 情况下使用混合精度
     ctx = nullcontext() if device_type == "cpu" else torch.cuda.amp.autocast()
 
     ddp = int(os.environ.get("RANK", -1)) != -1  # is this a ddp run?
