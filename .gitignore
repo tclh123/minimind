@@ -4,5 +4,6 @@
 /out
 /out-bak
 
+/tmp
 *.sw[po]
 __pycache__/
