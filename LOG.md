@@ -431,8 +431,11 @@ https://huggingface.co/docs/transformers/main/chat_templating
 https://github.com/jingyaogong/minimind/wiki
 
 Quick Links
+
 Read model documentation
-https://huggingface.co/docs/transformers/main/en/model_doc/llama#transformers.LlamaForCausalLM
+1. https://huggingface.co/docs/transformers/main/en/model_doc/llama#transformers.LlamaForCausalLM
+2. https://huggingface.co/docs/transformers/main/en/model_doc/qwen2#transformers.Qwen2ForCausalLM
+
 Read docs on high-level-pipeline
 https://huggingface.co/docs/transformers/main_classes/pipelines
 Read our learning resources
