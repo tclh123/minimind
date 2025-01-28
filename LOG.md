@@ -429,3 +429,12 @@ see also https://github.com/jingyaogong/minimind/issues/26#issuecomment-23629380
 https://huggingface.co/docs/transformers/main/chat_templating
 
 https://github.com/jingyaogong/minimind/wiki
+
+Quick Links
+Read model documentation
+https://huggingface.co/docs/transformers/main/en/model_doc/llama#transformers.LlamaForCausalLM
+Read docs on high-level-pipeline
+https://huggingface.co/docs/transformers/main_classes/pipelines
+Read our learning resources
+https://huggingface.co/learn
+
