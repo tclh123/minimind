@@ -216,3 +216,7 @@ if __name__ == "__main__":
     iter_per_epoch = len(train_loader)
     for epoch in range(args.epochs):
         train_epoch(epoch, wandb)
+
+    # 训练结束后自动关机
+    time.sleep(60)
+    os.system("/usr/bin/shutdown")
