@@ -349,6 +349,69 @@ OptenAI的价值是非常高的，它可以给消费者带来很多的利润，�
 10.337987661361694 s
 ```
 
+## from transformers
+
+感觉效果更差？不太说人话
+
+```
+用户：OpenAI 是
+回答：权权权权作为一个权权的，作为“权权权义、权作为政府的主权者、政府的主制力、作为权作为保障的，作为“公民权力的应力制作为。 （公义作为作为公义的将和民作为作为“公义、义、以、或或是以公民、自由、民、公义、以、公民、公民、公法、公民、公法、民法、公民、公民、民民、公义、民民和民民为为、公民、公民、公民、民民和民民的需要和保护，民为社会公民的保障，并为公民社会的责任和为、为为民民民民的、为民民民民为民民为和民民为和民民为为。
+```
+
+```
+/root/.cache/huggingface
+/root/.cache/huggingface/stored_tokens
+/root/.cache/huggingface/token
+/root/.cache/huggingface/hub
+/root/.cache/huggingface/hub/datasets--jingyaogong--minimind_dataset
+/root/.cache/huggingface/hub/datasets--jingyaogong--minimind_dataset/refs
+/root/.cache/huggingface/hub/datasets--jingyaogong--minimind_dataset/refs/main
+/root/.cache/huggingface/hub/version.txt
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/blobs
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/blobs/0dcf00543768c1980ab25a3f3368af85e5a17cf5
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/blobs/fa42a4fa3c7553ae4272e05e38256d9dd2cc8698
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/blobs/76798b88e0de97ce894a28702406c47bc69940ff
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/blobs/f6cde76909c47b8b3fd5582487c7d47cd63772a917afa30303f9a81cef1f5bd5
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/blobs/23cfacabaaf1c84b8486293b306b9d43d63f3da8
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/snapshots
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/snapshots/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/snapshots/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/config.json
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/snapshots/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/LMConfig.py
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/snapshots/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/model.py
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/snapshots/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/pytorch_model.bin
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/snapshots/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/generation_config.json
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/refs
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/refs/main
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/.no_exist
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/.no_exist/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/.no_exist/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/adapter_config.json
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/.no_exist/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/model.safetensors
+/root/.cache/huggingface/hub/models--jingyaogong--minimind-v1-small/.no_exist/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/model.safetensors.index.json
+/root/.cache/huggingface/hub/.locks
+/root/.cache/huggingface/hub/.locks/models--jingyaogong--minimind-v1-small
+/root/.cache/huggingface/hub/.locks/models--jingyaogong--minimind-v1-small/0dcf00543768c1980ab25a3f3368af85e5a17cf5.lock
+/root/.cache/huggingface/hub/.locks/models--jingyaogong--minimind-v1-small/fa42a4fa3c7553ae4272e05e38256d9dd2cc8698.lock
+/root/.cache/huggingface/hub/.locks/models--jingyaogong--minimind-v1-small/76798b88e0de97ce894a28702406c47bc69940ff.lock
+/root/.cache/huggingface/hub/.locks/models--jingyaogong--minimind-v1-small/f6cde76909c47b8b3fd5582487c7d47cd63772a917afa30303f9a81cef1f5bd5.lock
+/root/.cache/huggingface/hub/.locks/models--jingyaogong--minimind-v1-small/23cfacabaaf1c84b8486293b306b9d43d63f3da8.lock
+/root/.cache/huggingface/modules
+/root/.cache/huggingface/modules/__init__.py
+/root/.cache/huggingface/modules/transformers_modules
+/root/.cache/huggingface/modules/transformers_modules/__init__.py
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/__init__.py
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small/__init__.py
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/__init__.py
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/LMConfig.py
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/__pycache__
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/__pycache__/LMConfig.cpython-312.pyc
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/__pycache__/model.cpython-312.pyc
+/root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/model.py
+```
+
 # 总体步骤
 
 > 2.4 python 1-pretrain.py 执行预训练，得到 pretrain_*.pth 作为预训练的输出权重

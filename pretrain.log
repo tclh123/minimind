@@ -6741,3 +6741,247 @@ Epoch:[0/20](23800/41914) loss:2.446 lr:0.0001996 epoch_Time:43.0min:
 2025-01-28 14:06:00,261 __main__ INFO Epoch:[0/20](23900/41914) loss:2.407 lr:0.0001996 epoch_Time:43.0min:
 Epoch:[0/20](23900/41914) loss:2.407 lr:0.0001996 epoch_Time:43.0min:
 2025-01-28 14:06:00,261 __main__ INFO Epoch:[0/20](23900/41914) loss:2.621 lr:0.0001996 epoch_Time:43.0min:
+2025-01-28 14:06:14,338 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 14:06:14,460 __main__ INFO Model train..
+2025-01-28 14:06:14,602 __main__ INFO Epoch:[0/20](24000/41914) loss:2.509 lr:0.0001996 epoch_Time:43.0min:
+Epoch:[0/20](24000/41914) loss:2.509 lr:0.0001996 epoch_Time:43.0min:
+2025-01-28 14:06:14,602 __main__ INFO Epoch:[0/20](24000/41914) loss:2.439 lr:0.0001996 epoch_Time:43.0min:
+2025-01-28 14:06:28,810 __main__ INFO Epoch:[0/20](24100/41914) loss:2.547 lr:0.0001996 epoch_Time:42.0min:
+Epoch:[0/20](24100/41914) loss:2.547 lr:0.0001996 epoch_Time:42.0min:
+2025-01-28 14:06:28,810 __main__ INFO Epoch:[0/20](24100/41914) loss:2.561 lr:0.0001996 epoch_Time:42.0min:
+2025-01-28 14:06:43,020 __main__ INFO Epoch:[0/20](24200/41914) loss:2.517 lr:0.0001996 epoch_Time:42.0min:
+Epoch:[0/20](24200/41914) loss:2.517 lr:0.0001996 epoch_Time:42.0min:
+2025-01-28 14:06:43,020 __main__ INFO Epoch:[0/20](24200/41914) loss:2.557 lr:0.0001996 epoch_Time:42.0min:
+2025-01-28 14:06:57,221 __main__ INFO Epoch:[0/20](24300/41914) loss:2.699 lr:0.0001996 epoch_Time:42.0min:
+Epoch:[0/20](24300/41914) loss:2.699 lr:0.0001996 epoch_Time:42.0min:
+2025-01-28 14:06:57,221 __main__ INFO Epoch:[0/20](24300/41914) loss:2.587 lr:0.0001996 epoch_Time:42.0min:
+2025-01-28 14:07:11,437 __main__ INFO Epoch:[0/20](24400/41914) loss:2.642 lr:0.0001996 epoch_Time:42.0min:
+2025-01-28 14:07:11,437 __main__ INFO Epoch:[0/20](24400/41914) loss:2.625 lr:0.0001996 epoch_Time:42.0min:
+Epoch:[0/20](24400/41914) loss:2.642 lr:0.0001996 epoch_Time:42.0min:
+2025-01-28 14:07:25,647 __main__ INFO Epoch:[0/20](24500/41914) loss:2.458 lr:0.0001996 epoch_Time:41.0min:
+Epoch:[0/20](24500/41914) loss:2.458 lr:0.0001996 epoch_Time:41.0min:
+2025-01-28 14:07:25,647 __main__ INFO Epoch:[0/20](24500/41914) loss:2.746 lr:0.0001996 epoch_Time:41.0min:
+2025-01-28 14:07:39,857 __main__ INFO Epoch:[0/20](24600/41914) loss:2.665 lr:0.0001996 epoch_Time:41.0min:
+Epoch:[0/20](24600/41914) loss:2.665 lr:0.0001996 epoch_Time:41.0min:
+2025-01-28 14:07:39,857 __main__ INFO Epoch:[0/20](24600/41914) loss:2.790 lr:0.0001996 epoch_Time:41.0min:
+2025-01-28 14:07:54,062 __main__ INFO Epoch:[0/20](24700/41914) loss:2.628 lr:0.0001996 epoch_Time:41.0min:
+Epoch:[0/20](24700/41914) loss:2.628 lr:0.0001996 epoch_Time:41.0min:
+2025-01-28 14:07:54,062 __main__ INFO Epoch:[0/20](24700/41914) loss:2.565 lr:0.0001996 epoch_Time:41.0min:
+2025-01-28 14:08:08,284 __main__ INFO Epoch:[0/20](24800/41914) loss:2.621 lr:0.0001996 epoch_Time:41.0min:
+2025-01-28 14:08:08,284 __main__ INFO Epoch:[0/20](24800/41914) loss:2.566 lr:0.0001996 epoch_Time:41.0min:
+Epoch:[0/20](24800/41914) loss:2.566 lr:0.0001996 epoch_Time:41.0min:
+2025-01-28 14:08:23,298 __main__ INFO Epoch:[0/20](24900/41914) loss:2.636 lr:0.0001996 epoch_Time:40.0min:
+Epoch:[0/20](24900/41914) loss:2.636 lr:0.0001996 epoch_Time:40.0min:
+2025-01-28 14:08:23,298 __main__ INFO Epoch:[0/20](24900/41914) loss:2.551 lr:0.0001996 epoch_Time:40.0min:
+2025-01-28 14:08:37,492 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 14:08:37,607 __main__ INFO Model train..
+2025-01-28 14:08:37,770 __main__ INFO Epoch:[0/20](25000/41914) loss:2.561 lr:0.0001996 epoch_Time:40.0min:
+2025-01-28 14:08:37,770 __main__ INFO Epoch:[0/20](25000/41914) loss:2.507 lr:0.0001996 epoch_Time:40.0min:
+Epoch:[0/20](25000/41914) loss:2.507 lr:0.0001996 epoch_Time:40.0min:
+2025-01-28 14:08:52,470 __main__ INFO Epoch:[0/20](25100/41914) loss:2.635 lr:0.0001996 epoch_Time:40.0min:
+Epoch:[0/20](25100/41914) loss:2.635 lr:0.0001996 epoch_Time:40.0min:
+2025-01-28 14:08:52,470 __main__ INFO Epoch:[0/20](25100/41914) loss:2.511 lr:0.0001996 epoch_Time:40.0min:
+2025-01-28 14:09:07,874 __main__ INFO Epoch:[0/20](25200/41914) loss:2.462 lr:0.0001996 epoch_Time:40.0min:
+Epoch:[0/20](25200/41914) loss:2.462 lr:0.0001996 epoch_Time:40.0min:
+2025-01-28 14:09:07,874 __main__ INFO Epoch:[0/20](25200/41914) loss:2.611 lr:0.0001996 epoch_Time:40.0min:
+2025-01-28 14:09:22,085 __main__ INFO Epoch:[0/20](25300/41914) loss:2.497 lr:0.0001996 epoch_Time:39.0min:
+Epoch:[0/20](25300/41914) loss:2.497 lr:0.0001996 epoch_Time:39.0min:
+2025-01-28 14:09:22,085 __main__ INFO Epoch:[0/20](25300/41914) loss:2.522 lr:0.0001996 epoch_Time:39.0min:
+2025-01-28 14:09:36,299 __main__ INFO Epoch:[0/20](25400/41914) loss:2.682 lr:0.0001996 epoch_Time:39.0min:
+Epoch:[0/20](25400/41914) loss:2.682 lr:0.0001996 epoch_Time:39.0min:
+2025-01-28 14:09:36,299 __main__ INFO Epoch:[0/20](25400/41914) loss:2.625 lr:0.0001996 epoch_Time:39.0min:
+2025-01-28 14:09:50,512 __main__ INFO Epoch:[0/20](25500/41914) loss:2.533 lr:0.0001996 epoch_Time:39.0min:
+2025-01-28 14:09:50,512 __main__ INFO Epoch:[0/20](25500/41914) loss:2.554 lr:0.0001996 epoch_Time:39.0min:
+Epoch:[0/20](25500/41914) loss:2.533 lr:0.0001996 epoch_Time:39.0min:
+2025-01-28 14:10:04,718 __main__ INFO Epoch:[0/20](25600/41914) loss:2.426 lr:0.0001996 epoch_Time:39.0min:
+2025-01-28 14:10:04,718 __main__ INFO Epoch:[0/20](25600/41914) loss:2.618 lr:0.0001996 epoch_Time:39.0min:
+Epoch:[0/20](25600/41914) loss:2.426 lr:0.0001996 epoch_Time:39.0min:
+2025-01-28 14:10:18,936 __main__ INFO Epoch:[0/20](25700/41914) loss:2.539 lr:0.0001996 epoch_Time:38.0min:
+2025-01-28 14:10:18,936 __main__ INFO Epoch:[0/20](25700/41914) loss:2.403 lr:0.0001996 epoch_Time:38.0min:
+Epoch:[0/20](25700/41914) loss:2.539 lr:0.0001996 epoch_Time:38.0min:
+2025-01-28 14:10:34,305 __main__ INFO Epoch:[0/20](25800/41914) loss:2.573 lr:0.0001996 epoch_Time:38.0min:
+Epoch:[0/20](25800/41914) loss:2.573 lr:0.0001996 epoch_Time:38.0min:
+2025-01-28 14:10:34,305 __main__ INFO Epoch:[0/20](25800/41914) loss:2.594 lr:0.0001996 epoch_Time:38.0min:
+2025-01-28 14:10:48,529 __main__ INFO Epoch:[0/20](25900/41914) loss:2.589 lr:0.0001996 epoch_Time:38.0min:
+Epoch:[0/20](25900/41914) loss:2.589 lr:0.0001996 epoch_Time:38.0min:
+2025-01-28 14:10:48,529 __main__ INFO Epoch:[0/20](25900/41914) loss:2.436 lr:0.0001996 epoch_Time:38.0min:
+2025-01-28 14:11:02,598 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 14:11:02,711 __main__ INFO Model train..
+2025-01-28 14:11:02,853 __main__ INFO Epoch:[0/20](26000/41914) loss:2.480 lr:0.0001996 epoch_Time:38.0min:
+2025-01-28 14:11:02,853 __main__ INFO Epoch:[0/20](26000/41914) loss:2.508 lr:0.0001996 epoch_Time:38.0min:
+Epoch:[0/20](26000/41914) loss:2.508 lr:0.0001996 epoch_Time:38.0min:
+2025-01-28 14:11:17,059 __main__ INFO Epoch:[0/20](26100/41914) loss:2.601 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:11:17,059 __main__ INFO Epoch:[0/20](26100/41914) loss:2.533 lr:0.0001996 epoch_Time:37.0min:
+Epoch:[0/20](26100/41914) loss:2.601 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:11:31,263 __main__ INFO Epoch:[0/20](26200/41914) loss:2.613 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:11:31,264 __main__ INFO Epoch:[0/20](26200/41914) loss:2.658 lr:0.0001996 epoch_Time:37.0min:
+Epoch:[0/20](26200/41914) loss:2.613 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:11:45,466 __main__ INFO Epoch:[0/20](26300/41914) loss:2.559 lr:0.0001996 epoch_Time:37.0min:
+Epoch:[0/20](26300/41914) loss:2.559 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:11:45,466 __main__ INFO Epoch:[0/20](26300/41914) loss:2.527 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:11:59,669 __main__ INFO Epoch:[0/20](26400/41914) loss:2.650 lr:0.0001996 epoch_Time:37.0min:
+Epoch:[0/20](26400/41914) loss:2.650 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:11:59,669 __main__ INFO Epoch:[0/20](26400/41914) loss:2.411 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:12:13,879 __main__ INFO Epoch:[0/20](26500/41914) loss:2.599 lr:0.0001996 epoch_Time:37.0min:
+Epoch:[0/20](26500/41914) loss:2.599 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:12:13,879 __main__ INFO Epoch:[0/20](26500/41914) loss:2.494 lr:0.0001996 epoch_Time:37.0min:
+2025-01-28 14:12:28,085 __main__ INFO Epoch:[0/20](26600/41914) loss:2.561 lr:0.0001996 epoch_Time:36.0min:
+Epoch:[0/20](26600/41914) loss:2.561 lr:0.0001996 epoch_Time:36.0min:
+2025-01-28 14:12:28,085 __main__ INFO Epoch:[0/20](26600/41914) loss:2.495 lr:0.0001996 epoch_Time:36.0min:
+2025-01-28 14:12:42,292 __main__ INFO Epoch:[0/20](26700/41914) loss:2.632 lr:0.0001995 epoch_Time:36.0min:
+Epoch:[0/20](26700/41914) loss:2.632 lr:0.0001995 epoch_Time:36.0min:
+2025-01-28 14:12:42,292 __main__ INFO Epoch:[0/20](26700/41914) loss:2.652 lr:0.0001995 epoch_Time:36.0min:
+2025-01-28 14:12:56,499 __main__ INFO Epoch:[0/20](26800/41914) loss:2.565 lr:0.0001995 epoch_Time:36.0min:
+Epoch:[0/20](26800/41914) loss:2.565 lr:0.0001995 epoch_Time:36.0min:
+2025-01-28 14:12:56,499 __main__ INFO Epoch:[0/20](26800/41914) loss:2.511 lr:0.0001995 epoch_Time:36.0min:
+2025-01-28 14:13:10,704 __main__ INFO Epoch:[0/20](26900/41914) loss:2.659 lr:0.0001995 epoch_Time:36.0min:
+Epoch:[0/20](26900/41914) loss:2.659 lr:0.0001995 epoch_Time:36.0min:
+2025-01-28 14:13:10,704 __main__ INFO Epoch:[0/20](26900/41914) loss:2.556 lr:0.0001995 epoch_Time:36.0min:
+2025-01-28 14:13:24,765 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 14:13:24,876 __main__ INFO Model train..
+2025-01-28 14:13:25,018 __main__ INFO Epoch:[0/20](27000/41914) loss:2.701 lr:0.0001995 epoch_Time:35.0min:
+Epoch:[0/20](27000/41914) loss:2.701 lr:0.0001995 epoch_Time:35.0min:
+2025-01-28 14:13:25,018 __main__ INFO Epoch:[0/20](27000/41914) loss:2.599 lr:0.0001995 epoch_Time:35.0min:
+2025-01-28 14:13:39,221 __main__ INFO Epoch:[0/20](27100/41914) loss:2.396 lr:0.0001995 epoch_Time:35.0min:
+Epoch:[0/20](27100/41914) loss:2.396 lr:0.0001995 epoch_Time:35.0min:
+2025-01-28 14:13:39,222 __main__ INFO Epoch:[0/20](27100/41914) loss:2.583 lr:0.0001995 epoch_Time:35.0min:
+2025-01-28 14:13:53,427 __main__ INFO Epoch:[0/20](27200/41914) loss:2.511 lr:0.0001995 epoch_Time:35.0min:
+Epoch:[0/20](27200/41914) loss:2.511 lr:0.0001995 epoch_Time:35.0min:
+2025-01-28 14:13:53,427 __main__ INFO Epoch:[0/20](27200/41914) loss:2.653 lr:0.0001995 epoch_Time:35.0min:
+2025-01-28 14:14:07,631 __main__ INFO Epoch:[0/20](27300/41914) loss:2.477 lr:0.0001995 epoch_Time:35.0min:
+Epoch:[0/20](27300/41914) loss:2.477 lr:0.0001995 epoch_Time:35.0min:
+2025-01-28 14:14:07,631 __main__ INFO Epoch:[0/20](27300/41914) loss:2.540 lr:0.0001995 epoch_Time:35.0min:
+2025-01-28 14:14:21,834 __main__ INFO Epoch:[0/20](27400/41914) loss:2.662 lr:0.0001995 epoch_Time:34.0min:
+2025-01-28 14:14:21,834 __main__ INFO Epoch:[0/20](27400/41914) loss:2.639 lr:0.0001995 epoch_Time:34.0min:
+Epoch:[0/20](27400/41914) loss:2.662 lr:0.0001995 epoch_Time:34.0min:
+2025-01-28 14:14:36,037 __main__ INFO Epoch:[0/20](27500/41914) loss:2.591 lr:0.0001995 epoch_Time:34.0min:
+Epoch:[0/20](27500/41914) loss:2.591 lr:0.0001995 epoch_Time:34.0min:
+2025-01-28 14:14:36,037 __main__ INFO Epoch:[0/20](27500/41914) loss:2.450 lr:0.0001995 epoch_Time:34.0min:
+2025-01-28 14:14:50,243 __main__ INFO Epoch:[0/20](27600/41914) loss:2.455 lr:0.0001995 epoch_Time:34.0min:
+Epoch:[0/20](27600/41914) loss:2.455 lr:0.0001995 epoch_Time:34.0min:
+2025-01-28 14:14:50,244 __main__ INFO Epoch:[0/20](27600/41914) loss:2.632 lr:0.0001995 epoch_Time:34.0min:
+2025-01-28 14:15:04,442 __main__ INFO Epoch:[0/20](27700/41914) loss:2.526 lr:0.0001995 epoch_Time:34.0min:
+Epoch:[0/20](27700/41914) loss:2.526 lr:0.0001995 epoch_Time:34.0min:
+2025-01-28 14:15:04,443 __main__ INFO Epoch:[0/20](27700/41914) loss:2.520 lr:0.0001995 epoch_Time:34.0min:
+2025-01-28 14:15:18,645 __main__ INFO Epoch:[0/20](27800/41914) loss:2.702 lr:0.0001995 epoch_Time:33.0min:
+2025-01-28 14:15:18,646 __main__ INFO Epoch:[0/20](27800/41914) loss:2.471 lr:0.0001995 epoch_Time:33.0min:
+Epoch:[0/20](27800/41914) loss:2.471 lr:0.0001995 epoch_Time:33.0min:
+2025-01-28 14:15:32,843 __main__ INFO Epoch:[0/20](27900/41914) loss:2.674 lr:0.0001995 epoch_Time:33.0min:
+Epoch:[0/20](27900/41914) loss:2.674 lr:0.0001995 epoch_Time:33.0min:
+2025-01-28 14:15:32,843 __main__ INFO Epoch:[0/20](27900/41914) loss:2.621 lr:0.0001995 epoch_Time:33.0min:
+2025-01-28 14:15:46,887 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 14:15:47,000 __main__ INFO Model train..
+2025-01-28 14:15:47,142 __main__ INFO Epoch:[0/20](28000/41914) loss:2.640 lr:0.0001995 epoch_Time:33.0min:
+Epoch:[0/20](28000/41914) loss:2.640 lr:0.0001995 epoch_Time:33.0min:
+2025-01-28 14:15:47,142 __main__ INFO Epoch:[0/20](28000/41914) loss:2.613 lr:0.0001995 epoch_Time:33.0min:
+2025-01-28 14:16:01,318 __main__ INFO Epoch:[0/20](28100/41914) loss:2.505 lr:0.0001995 epoch_Time:33.0min:
+Epoch:[0/20](28100/41914) loss:2.505 lr:0.0001995 epoch_Time:33.0min:
+2025-01-28 14:16:01,318 __main__ INFO Epoch:[0/20](28100/41914) loss:2.619 lr:0.0001995 epoch_Time:33.0min:
+2025-01-28 14:16:15,506 __main__ INFO Epoch:[0/20](28200/41914) loss:2.573 lr:0.0001995 epoch_Time:32.0min:
+Epoch:[0/20](28200/41914) loss:2.573 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:16:15,506 __main__ INFO Epoch:[0/20](28200/41914) loss:2.525 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:16:29,675 __main__ INFO Epoch:[0/20](28300/41914) loss:2.548 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:16:29,675 __main__ INFO Epoch:[0/20](28300/41914) loss:2.506 lr:0.0001995 epoch_Time:32.0min:
+Epoch:[0/20](28300/41914) loss:2.506 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:16:43,859 __main__ INFO Epoch:[0/20](28400/41914) loss:2.612 lr:0.0001995 epoch_Time:32.0min:
+Epoch:[0/20](28400/41914) loss:2.612 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:16:43,860 __main__ INFO Epoch:[0/20](28400/41914) loss:2.613 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:16:58,050 __main__ INFO Epoch:[0/20](28500/41914) loss:2.551 lr:0.0001995 epoch_Time:32.0min:
+Epoch:[0/20](28500/41914) loss:2.551 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:16:58,050 __main__ INFO Epoch:[0/20](28500/41914) loss:2.585 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:17:12,235 __main__ INFO Epoch:[0/20](28600/41914) loss:2.735 lr:0.0001995 epoch_Time:32.0min:
+Epoch:[0/20](28600/41914) loss:2.735 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:17:12,235 __main__ INFO Epoch:[0/20](28600/41914) loss:2.469 lr:0.0001995 epoch_Time:32.0min:
+2025-01-28 14:17:26,418 __main__ INFO Epoch:[0/20](28700/41914) loss:2.596 lr:0.0001995 epoch_Time:31.0min:
+Epoch:[0/20](28700/41914) loss:2.596 lr:0.0001995 epoch_Time:31.0min:
+2025-01-28 14:17:26,418 __main__ INFO Epoch:[0/20](28700/41914) loss:2.451 lr:0.0001995 epoch_Time:31.0min:
+2025-01-28 14:17:40,584 __main__ INFO Epoch:[0/20](28800/41914) loss:2.568 lr:0.0001995 epoch_Time:31.0min:
+Epoch:[0/20](28800/41914) loss:2.568 lr:0.0001995 epoch_Time:31.0min:
+2025-01-28 14:17:40,584 __main__ INFO Epoch:[0/20](28800/41914) loss:2.552 lr:0.0001995 epoch_Time:31.0min:
+2025-01-28 14:17:54,731 __main__ INFO Epoch:[0/20](28900/41914) loss:2.767 lr:0.0001995 epoch_Time:31.0min:
+2025-01-28 14:17:54,731 __main__ INFO Epoch:[0/20](28900/41914) loss:2.495 lr:0.0001995 epoch_Time:31.0min:
+Epoch:[0/20](28900/41914) loss:2.495 lr:0.0001995 epoch_Time:31.0min:
+2025-01-28 14:18:08,733 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 14:18:08,840 __main__ INFO Model train..
+2025-01-28 14:18:08,981 __main__ INFO Epoch:[0/20](29000/41914) loss:2.540 lr:0.0001995 epoch_Time:31.0min:
+Epoch:[0/20](29000/41914) loss:2.540 lr:0.0001995 epoch_Time:31.0min:
+2025-01-28 14:18:08,981 __main__ INFO Epoch:[0/20](29000/41914) loss:2.527 lr:0.0001995 epoch_Time:31.0min:
+2025-01-28 14:18:23,121 __main__ INFO Epoch:[0/20](29100/41914) loss:2.416 lr:0.0001995 epoch_Time:30.0min:
+Epoch:[0/20](29100/41914) loss:2.416 lr:0.0001995 epoch_Time:30.0min:
+2025-01-28 14:18:23,122 __main__ INFO Epoch:[0/20](29100/41914) loss:2.530 lr:0.0001995 epoch_Time:30.0min:
+2025-01-28 14:18:38,103 __main__ INFO Epoch:[0/20](29200/41914) loss:2.617 lr:0.0001995 epoch_Time:30.0min:
+2025-01-28 14:18:38,103 __main__ INFO Epoch:[0/20](29200/41914) loss:2.462 lr:0.0001995 epoch_Time:30.0min:
+Epoch:[0/20](29200/41914) loss:2.617 lr:0.0001995 epoch_Time:30.0min:
+2025-01-28 14:18:52,242 __main__ INFO Epoch:[0/20](29300/41914) loss:2.693 lr:0.0001995 epoch_Time:30.0min:
+Epoch:[0/20](29300/41914) loss:2.693 lr:0.0001995 epoch_Time:30.0min:
+2025-01-28 14:18:52,242 __main__ INFO Epoch:[0/20](29300/41914) loss:2.477 lr:0.0001995 epoch_Time:30.0min:
+2025-01-28 14:19:06,385 __main__ INFO Epoch:[0/20](29400/41914) loss:2.531 lr:0.0001995 epoch_Time:30.0min:
+Epoch:[0/20](29400/41914) loss:2.531 lr:0.0001995 epoch_Time:30.0min:
+2025-01-28 14:19:06,385 __main__ INFO Epoch:[0/20](29400/41914) loss:2.642 lr:0.0001995 epoch_Time:30.0min:
+2025-01-28 14:19:20,525 __main__ INFO Epoch:[0/20](29500/41914) loss:2.602 lr:0.0001995 epoch_Time:29.0min:
+Epoch:[0/20](29500/41914) loss:2.602 lr:0.0001995 epoch_Time:29.0min:
+2025-01-28 14:19:20,525 __main__ INFO Epoch:[0/20](29500/41914) loss:2.563 lr:0.0001995 epoch_Time:29.0min:
+2025-01-28 14:19:34,668 __main__ INFO Epoch:[0/20](29600/41914) loss:2.519 lr:0.0001994 epoch_Time:29.0min:
+Epoch:[0/20](29600/41914) loss:2.519 lr:0.0001994 epoch_Time:29.0min:
+2025-01-28 14:19:34,668 __main__ INFO Epoch:[0/20](29600/41914) loss:2.333 lr:0.0001994 epoch_Time:29.0min:
+2025-01-28 14:19:48,808 __main__ INFO Epoch:[0/20](29700/41914) loss:2.609 lr:0.0001994 epoch_Time:29.0min:
+Epoch:[0/20](29700/41914) loss:2.609 lr:0.0001994 epoch_Time:29.0min:
+2025-01-28 14:19:48,808 __main__ INFO Epoch:[0/20](29700/41914) loss:2.597 lr:0.0001994 epoch_Time:29.0min:
+2025-01-28 14:20:02,953 __main__ INFO Epoch:[0/20](29800/41914) loss:2.650 lr:0.0001994 epoch_Time:29.0min:
+2025-01-28 14:20:02,953 __main__ INFO Epoch:[0/20](29800/41914) loss:2.666 lr:0.0001994 epoch_Time:29.0min:
+Epoch:[0/20](29800/41914) loss:2.666 lr:0.0001994 epoch_Time:29.0min:
+2025-01-28 14:20:17,101 __main__ INFO Epoch:[0/20](29900/41914) loss:2.543 lr:0.0001994 epoch_Time:28.0min:
+Epoch:[0/20](29900/41914) loss:2.543 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:20:17,101 __main__ INFO Epoch:[0/20](29900/41914) loss:2.610 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:20:31,103 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 14:20:31,213 __main__ INFO Model train..
+2025-01-28 14:20:31,354 __main__ INFO Epoch:[0/20](30000/41914) loss:2.577 lr:0.0001994 epoch_Time:28.0min:
+Epoch:[0/20](30000/41914) loss:2.577 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:20:31,354 __main__ INFO Epoch:[0/20](30000/41914) loss:2.491 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:20:45,494 __main__ INFO Epoch:[0/20](30100/41914) loss:2.608 lr:0.0001994 epoch_Time:28.0min:
+Epoch:[0/20](30100/41914) loss:2.608 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:20:45,494 __main__ INFO Epoch:[0/20](30100/41914) loss:2.560 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:20:59,638 __main__ INFO Epoch:[0/20](30200/41914) loss:2.600 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:20:59,638 __main__ INFO Epoch:[0/20](30200/41914) loss:2.402 lr:0.0001994 epoch_Time:28.0min:
+Epoch:[0/20](30200/41914) loss:2.600 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:21:14,122 __main__ INFO Epoch:[0/20](30300/41914) loss:2.586 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:21:14,123 __main__ INFO Epoch:[0/20](30300/41914) loss:2.325 lr:0.0001994 epoch_Time:28.0min:
+Epoch:[0/20](30300/41914) loss:2.325 lr:0.0001994 epoch_Time:28.0min:
+2025-01-28 14:21:28,441 __main__ INFO Epoch:[0/20](30400/41914) loss:2.529 lr:0.0001994 epoch_Time:27.0min:
+2025-01-28 14:21:28,441 __main__ INFO Epoch:[0/20](30400/41914) loss:2.503 lr:0.0001994 epoch_Time:27.0min:
+Epoch:[0/20](30400/41914) loss:2.503 lr:0.0001994 epoch_Time:27.0min:
+2025-01-28 14:21:42,583 __main__ INFO Epoch:[0/20](30500/41914) loss:2.542 lr:0.0001994 epoch_Time:27.0min:
+Epoch:[0/20](30500/41914) loss:2.542 lr:0.0001994 epoch_Time:27.0min:
+2025-01-28 14:21:42,583 __main__ INFO Epoch:[0/20](30500/41914) loss:2.570 lr:0.0001994 epoch_Time:27.0min:
+2025-01-28 14:21:56,725 __main__ INFO Epoch:[0/20](30600/41914) loss:2.578 lr:0.0001994 epoch_Time:27.0min:
+Epoch:[0/20](30600/41914) loss:2.578 lr:0.0001994 epoch_Time:27.0min:
+2025-01-28 14:21:56,726 __main__ INFO Epoch:[0/20](30600/41914) loss:2.648 lr:0.0001994 epoch_Time:27.0min:
+2025-01-28 14:22:10,866 __main__ INFO Epoch:[0/20](30700/41914) loss:2.602 lr:0.0001994 epoch_Time:27.0min:
+Epoch:[0/20](30700/41914) loss:2.602 lr:0.0001994 epoch_Time:27.0min:
+2025-01-28 14:22:10,866 __main__ INFO Epoch:[0/20](30700/41914) loss:2.659 lr:0.0001994 epoch_Time:27.0min:
+2025-01-28 14:22:25,008 __main__ INFO Epoch:[0/20](30800/41914) loss:2.691 lr:0.0001994 epoch_Time:26.0min:
+Epoch:[0/20](30800/41914) loss:2.691 lr:0.0001994 epoch_Time:26.0min:
+2025-01-28 14:22:25,008 __main__ INFO Epoch:[0/20](30800/41914) loss:2.476 lr:0.0001994 epoch_Time:26.0min:
+2025-01-28 14:22:39,148 __main__ INFO Epoch:[0/20](30900/41914) loss:2.486 lr:0.0001994 epoch_Time:26.0min:
+2025-01-28 14:22:39,148 __main__ INFO Epoch:[0/20](30900/41914) loss:2.604 lr:0.0001994 epoch_Time:26.0min:
+Epoch:[0/20](30900/41914) loss:2.486 lr:0.0001994 epoch_Time:26.0min:
+2025-01-28 14:22:53,148 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 14:22:53,259 __main__ INFO Model train..
+2025-01-28 14:22:53,400 __main__ INFO Epoch:[0/20](31000/41914) loss:2.591 lr:0.0001994 epoch_Time:26.0min:
+Epoch:[0/20](31000/41914) loss:2.591 lr:0.0001994 epoch_Time:26.0min:2025-01-28 14:22:53,400 __main__ INFO Epoch:[0/20](31000/41914) loss:2.734 lr:0.0001994 epoch_Time:26.0min:
+
+2025-01-28 14:23:07,540 __main__ INFO Epoch:[0/20](31100/41914) loss:2.576 lr:0.0001994 epoch_Time:26.0min:
+Epoch:[0/20](31100/41914) loss:2.576 lr:0.0001994 epoch_Time:26.0min:
+2025-01-28 14:23:07,541 __main__ INFO Epoch:[0/20](31100/41914) loss:2.616 lr:0.0001994 epoch_Time:26.0min:
+2025-01-28 14:23:21,683 __main__ INFO Epoch:[0/20](31200/41914) loss:2.562 lr:0.0001994 epoch_Time:25.0min:
+Epoch:[0/20](31200/41914) loss:2.562 lr:0.0001994 epoch_Time:25.0min:
+2025-01-28 14:23:21,683 __main__ INFO Epoch:[0/20](31200/41914) loss:2.613 lr:0.0001994 epoch_Time:25.0min:
+2025-01-28 14:23:35,822 __main__ INFO Epoch:[0/20](31300/41914) loss:2.558 lr:0.0001994 epoch_Time:25.0min:
+Epoch:[0/20](31300/41914) loss:2.558 lr:0.0001994 epoch_Time:25.0min:
+2025-01-28 14:23:35,822 __main__ INFO Epoch:[0/20](31300/41914) loss:2.478 lr:0.0001994 epoch_Time:25.0min:
+2025-01-28 14:23:49,966 __main__ INFO Epoch:[0/20](31400/41914) loss:2.508 lr:0.0001994 epoch_Time:25.0min:
+Epoch:[0/20](31400/41914) loss:2.508 lr:0.0001994 epoch_Time:25.0min:
+2025-01-28 14:23:49,966 __main__ INFO Epoch:[0/20](31400/41914) loss:2.524 lr:0.0001994 epoch_Time:25.0min:
+2025-01-28 14:24:04,107 __main__ INFO Epoch:[0/20](31500/41914) loss:2.479 lr:0.0001994 epoch_Time:25.0min:
+Epoch:[0/20](31500/41914) loss:2.479 lr:0.0001994 epoch_Time:25.0min:
+2025-01-28 14:24:04,107 __main__ INFO Epoch:[0/20](31500/41914) loss:2.701 lr:0.0001994 epoch_Time:25.0min:

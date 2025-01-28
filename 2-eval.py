@@ -39,7 +39,7 @@ def init_model(lm_config):
         # 加载到模型中
         model.load_state_dict(state_dict, strict=False)
     else:
-        model = AutoModelForCausalLM.from_pretrained('./minimind-v1-small', trust_remote_code=True)
+        model = AutoModelForCausalLM.from_pretrained('jingyaogong/minimind-v1-small', trust_remote_code=True)
     model = model.to(device)
 
     print(f'模型参数: {count_parameters(model) / 1e6} 百万 = {count_parameters(model) / 1e9} B (Billion)')
