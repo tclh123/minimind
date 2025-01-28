@@ -17,7 +17,7 @@ def count_parameters(model):
 
 def init_model(lm_config):
     tokenizer = AutoTokenizer.from_pretrained('./model/minimind_tokenizer')
-    model_from = 1  # 1从权重，2用transformers
+    model_from = 2  # 1从权重，2用transformers
 
     if model_from == 1:
         moe_path = '_moe' if lm_config.use_moe else ''
@@ -80,7 +80,7 @@ if __name__ == "__main__":
     # tokenizer.push_to_hub("minimind")
 
     # answer_way = int(input('输入0自动测试，输入1问题测试：'))
-    answer_way = 0
+    answer_way = 1
     stream = True
 
     prompt_datas = [

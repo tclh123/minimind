@@ -20,7 +20,14 @@ from model.LMConfig import LMConfig
 
 warnings.filterwarnings('ignore')
 
+# "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+# 大概需要使用 11GiB 显存
+
 # TODO:
+# The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+# Setting `pad_token_id` to `eos_token_id`:151643 for open-end generation.
+# The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+
 # Traceback (most recent call last):
 #   File "/root/projects/minimind/eval_deepseek.py", line 164, in <module>
 #     res_y = model.generate(x, max_new_tokens=max_seq_len, temperature=temperature,
@@ -203,8 +210,8 @@ if __name__ == "__main__":
         '江苏省的最好的大学',
     ]
 
-    print(query(prompt_datas[0]))
-    sys.exit(0)
+    # print(query(prompt_datas[0]))
+    # sys.exit(0)
 
     qa_index = 0
     while True:
@@ -223,45 +230,50 @@ if __name__ == "__main__":
         x = tokenizer(prompt).data['input_ids']
         x = (torch.tensor(x, dtype=torch.long, device=device)[None, ...])
 
-        with torch.no_grad():
-            # res_y = model.generate(x, tokenizer.eos_token_id, max_new_tokens=max_seq_len, temperature=temperature,
-            #                        top_k=top_k, stream=stream)
-            res_y = model.generate(x, max_new_tokens=max_seq_len, temperature=temperature,
-                                   top_k=top_k)
-            print('回答：', end='')
-            try:
-                y = next(res_y)
-            except StopIteration:
-                print("No answer")
-                continue
+        res_y = model.generate(x, max_new_tokens=max_seq_len, temperature=temperature, do_sample=True)
+        print('回答：', end='')
+        generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(x, res_y)]
+        response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+        print(response, end='', flush=True)
+        print('\n')
 
-            history_idx = 0
-            while y != None:
-                answer = tokenizer.decode(y[0].tolist())
-                if answer and answer[-1] == '�':
-                    try:
-                        y = next(res_y)
-                    except:
-                        break
-                    continue
-                # print(answer)
-                if not len(answer):
-                    try:
-                        y = next(res_y)
-                    except:
-                        break
-                    continue
+        # with torch.no_grad():
+        #     # res_y = model.generate(x, tokenizer.eos_token_id, max_new_tokens=max_seq_len, temperature=temperature,
+        #     #                        top_k=top_k, stream=stream)
 
-                print(answer[history_idx:], end='', flush=True)
-                try:
-                    y = next(res_y)
-                except:
-                    break
-                history_idx = len(answer)
-                if not stream:
-                    break
+        #     try:
+        #         y = next(res_y)
+        #     except StopIteration:
+        #         print("No answer")
+        #         continue
 
-            print('\n')
+        #     history_idx = 0
+        #     while y != None:
+        #         answer = tokenizer.decode(y[0].tolist())
+        #         if answer and answer[-1] == '�':
+        #             try:
+        #                 y = next(res_y)
+        #             except:
+        #                 break
+        #             continue
+        #         # print(answer)
+        #         if not len(answer):
+        #             try:
+        #                 y = next(res_y)
+        #             except:
+        #                 break
+        #             continue
+
+        #         print(answer[history_idx:], end='', flush=True)
+        #         try:
+        #             y = next(res_y)
+        #         except:
+        #             break
+        #         history_idx = len(answer)
+        #         if not stream:
+        #             break
+
+        #     print('\n')
 
         end = time.time()
         print(end - start, 's')
