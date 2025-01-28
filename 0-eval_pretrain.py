@@ -1,3 +1,6 @@
+import os
+import logging
+import argparse
 import random
 import time
 
@@ -5,7 +8,13 @@ import numpy as np
 import torch
 import warnings
 from transformers import AutoTokenizer, AutoModelForCausalLM
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)s %(levelname)s %(message)s')
+
+logger.info('Imporing: from model.model import Transformer')
 from model.model import Transformer
+logger.info('Imporing: from model.LMConfig import LMConfig')
 from model.LMConfig import LMConfig
 
 warnings.filterwarnings('ignore')
@@ -20,8 +29,10 @@ def init_model(lm_config):
     model_from = 1  # 1从权重，2用transformers
 
     if model_from == 1:
-        moe_path = '_moe' if lm_config.use_moe else ''
-        ckp = f'./out/pretrain_{lm_config.dim}{moe_path}.pth'
+        # moe_path = '_moe' if lm_config.use_moe else ''
+        # ckp = f'./out/pretrain_{lm_config.dim}{moe_path}.pth'
+        ckp = os.path.join(args.out_dir, args.checkpoint)
+        logger.info('Load from checkpoint %s', ckp)
 
         model = Transformer(lm_config)
         state_dict = torch.load(ckp, map_location=device)
@@ -39,6 +50,7 @@ def init_model(lm_config):
         # 加载到模型中
         model.load_state_dict(state_dict, strict=False)
     else:
+        logger.info('Load from transformers %s', 'minimind')
         model = AutoModelForCausalLM.from_pretrained('minimind', trust_remote_code=True)
     model = model.to(device)
 
@@ -57,15 +69,44 @@ def setup_seed(seed):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="MiniMind eval_pretrain")
+    parser.add_argument("--out_dir", type=str, default="out", help="Output directory")
+    parser.add_argument("--checkpoint", '-p', type=str, default="pretrain_512-202501280340.pth", help="the checkpoint filename to load")
+    parser.add_argument("--from-transformers", '-t', action='store_true', default=False, help="whether to load from transformers")
+    parser.add_argument("--auto", '-a', action='store_true', default=False, help="whether to auto test")
+
+    # parser.add_argument("--epochs", type=int, default=20, help="Number of epochs")
+    # parser.add_argument("--batch_size", type=int, default=64, help="Batch size")
+    # parser.add_argument("--learning_rate", type=float, default=2e-4, help="Learning rate")
+    parser.add_argument("--device", type=str, default="cuda:0" if torch.cuda.is_available() else "cpu",
+                        help="Device to use")
+    parser.add_argument("--dtype", type=str, default="bfloat16", help="Data type")
+    # parser.add_argument("--use_wandb", action="store_true", help="Use Weights & Biases")
+    # parser.add_argument("--wandb_project", type=str, default="MiniMind-Pretrain", help="Weights & Biases project name")
+    # parser.add_argument("--num_workers", type=int, default=1, help="Number of workers for data loading")
+    # parser.add_argument("--data_path", type=str, default="./dataset/pretrain_data.csv", help="Path to training data")
+    # parser.add_argument("--ddp", action="store_true", help="Use DistributedDataParallel")
+    # parser.add_argument("--accumulation_steps", type=int, default=8, help="Gradient accumulation steps")
+    # parser.add_argument("--grad_clip", type=float, default=1.0, help="Gradient clipping threshold")
+    # parser.add_argument("--warmup_iters", type=int, default=0, help="Number of warmup iterations")
+    # parser.add_argument("--log_interval", type=int, default=100, help="Logging interval")
+    # parser.add_argument("--save_interval", type=int, default=1000, help="Model saving interval")
+    # parser.add_argument('--local_rank', type=int, default=-1, help='local rank for distributed training')
+
+    args = parser.parse_args()
+    logger.info('Run with args: %s', args)
+
     # -----------------------------------------------------------------------------
-    out_dir = 'out'
+    out_dir = args.out_dir
     start = ""
     temperature = 0.7
     top_k = 8
     setup_seed(1337)
     # device = 'cpu'
-    device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
-    dtype = 'bfloat16'
+    # device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+    device = args.device
+    # dtype = 'bfloat16'
+    dtype = args.dtype
     max_seq_len = 512
     lm_config = LMConfig()
     lm_config.max_seq_len = max_seq_len
@@ -74,7 +115,7 @@ if __name__ == "__main__":
     model, tokenizer = init_model(lm_config)
     model = model.eval()
     # int(input('输入0自动测试，输入1问题测试：'))
-    answer_way = 0
+    answer_way = 'auto' if args.auto else 'user'
     stream = True
 
     prompt_datas = [
@@ -97,7 +138,7 @@ if __name__ == "__main__":
     qa_index = 0
     while True:
         start = time.time()
-        if answer_way == 1:
+        if answer_way == 'user':
             # run generation
             prompt = input('用户：')
         else:

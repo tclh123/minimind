@@ -312,6 +312,43 @@ index d9b70e2..676f8ec 100644
      return model, tokenizer
 ```
 
+## pretrain eval
+
+预测下一词
+
+```
+minimind # grep 'OpenAI的价值' dataset/pretrain_data.csv
+"两家公司没有披露具体款项，但《纽约时报》、彭博分别援引一位知情人士消息称，微软将向OpenAI投资100亿美元。美国财经媒体Semafor此前1月10日报道了这一数额。这笔资金还包括其它风险投资机构。包括新投
+资在内，OpenAI的价值将达到290亿美元。
+minimind # grep '价值是很高的' dataset/pretrain_data.csv
+戴氏法器说焚香习俗在我国有着悠久的历史，古人焚香很多，所以香炉的用途很广，除了礼仪环境所需要用的熏衣外，还是书斋里便于诵阅、有益于理解及记忆的文玩清供。此外还有一种用途便是陵墓、寺庙及权势之
+家烧香、拜佛、祭祖神之用。虽然香炉收藏相对小众一些，但是其收藏价值和历史价值不容忽视。从工艺造型来看，一些皇帝御赐的铜香炉由于其精的工艺而提升了其价值。因此，年代久远、雕工精美的铜香炉价值
+不菲。另外，由于明清铜炉历史上经历诸多劫难，损失惨重，造成后仿炉和私款炉也已成为珍罕的历史文物。看来铜香炉的收藏价值是很高的，本厂还加工铜鼎，铜钟等各种青铜器欢迎您的订购。"
+上面介绍的海参芡实米粥的做法，是不是大家已经都学会了呢，方法简单，而且营养价值是很高的哦，如果你在考虑吃什么，这道营养的粥品是不错的选择，促进排便防上火，营养多，养胃补血养心安神，是不错的明
+目滋阴的好食材哦。"
+
+# python 0-eval_pretrain.py
+2025-01-28 14:02:38,200 __main__ INFO Imporing: from model.model import Transformer
+2025-01-28 14:02:38,667 __main__ INFO Imporing: from model.LMConfig import LMConfig
+2025-01-28 14:02:38,696 __main__ INFO Run with args: Namespace(out_dir='out', checkpoint='pretrain_512-202501280340.pth', from_transformers=False, auto=False, device='cuda:0', dtype='bfloat1
+6')
+2025-01-28 14:02:38,707 __main__ INFO Load from checkpoint out/pretrain_512-202501280340.pth
+模型参数: 26.878464 百万 = 0.026878464 B (Billion)
+用户：OpenAI的价值
+回答：是很高的，而且还非常的有价值。
+OpenAI的价值是非常高的，因为OpenAI的价值是很高的，它可以给消费者带来更多的利润，所以在市场上有很多的价值。比如说，OpenAI的价值是非常高，并且它有很好的价值，而且它的价值也非常的高，而且它的价
+值也是非常高的。
+OptenAI的价值是非常高的，它可以给消费者带来更多的利润，所以在市场上有很多的价值也是非常高的，而且它的价值也非常的高，它可以给消费者带来很多的利润，所以它不仅可以给消费者带来更多的利润，而且
+它的价值也非常的高。
+OptenAI的价值是非常高的，它可以给消费者带来更多的利润，而且它还具有非常好的经济效益，所以它的价值是非常高的，它可以帮助人们获得很多的经济效益，而且它的价值非常的高，它也非常的高昂，所以在市
+场上也是非常受欢迎。
+OptenAI的价值是非常高的，它可以给消费者带来很多的利润，而且它的价值也是非常高的，它可以给人们带来很多的经济效益，并且它的价值也非常高的，它可以给人们带来很多的利润，而且它的价值也非常的高，
+它可以让人们的经济收入增加了很多，但是它也是非常不错的，它的价值也是非常高的，所以它的价值还是非常高的，它可以给人们带来很多的经济效益，而且它的价值也是非常的高的，它可以让人们的经济效益得到
+非常的大大的进步，所以它的价值也是非常高的。
+
+10.337987661361694 s
+```
+
 # 总体步骤
 
 > 2.4 python 1-pretrain.py 执行预训练，得到 pretrain_*.pth 作为预训练的输出权重
@@ -320,3 +357,12 @@ index d9b70e2..676f8ec 100644
 > 2.7 python 5-dpo_train.py 执行DPO人类偏好强化学习对齐（非必须）
 
 
+# Others
+
+see also https://github.com/jingyaogong/minimind/issues/26#issuecomment-2362938042
+
+# Knowledge
+
+https://huggingface.co/docs/transformers/main/chat_templating
+
+https://github.com/jingyaogong/minimind/wiki
