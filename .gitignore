@@ -2,6 +2,7 @@
 /dataset
 # /wandb
 /out
+/out-bak
 
-*.swp
+*.sw[po]
 __pycache__/

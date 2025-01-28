@@ -208,6 +208,110 @@ ls -lhtr out/pretrain_512.pth
 -rw-r--r-- 1 root root 103M Jan 28 02:05 out/pretrain_512.pth
 ```
 
+## examine checkpoint
+
+```
+$ strings out-bak/pretrain_512.pth | head
+pretrain_512/data.pklFB
+ZZZZZZZZZ
+ccollections
+OrderedDict
+tok_embeddings.weightq
+ctorch._utils
+_rebuild_tensor_v2
+storageq
+ctorch
+FloatStorage
+```
+
+```
+# strings out-bak/pretrain_512.pth | grep pretrain_512 | sort
+pretrain_512/.data/serialization_idFB)
+pretrain_512/.data/serialization_idPK
+pretrain_512/byteorderFB9
+pretrain_512/byteorderPK
+pretrain_512/data.pklFB
+pretrain_512/data.pklPK
+pretrain_512/data/0FB5
+pretrain_512/data/0PK
+pretrain_512/data/10FB:
+pretrain_512/data/10PK
+pretrain_512/data/11FB:
+pretrain_512/data/11PK
+pretrain_512/data/12FB:
+...
+```
+
+```
+# strings out-bak/pretrain_512.pth | grep pretrain_512 | sort | tail
+pretrain_512/data/73FB:
+pretrain_512/data/73PK
+pretrain_512/data/7FB;
+pretrain_512/data/7PK
+pretrain_512/data/8FB;
+pretrain_512/data/8PK
+pretrain_512/data/9FB;
+pretrain_512/data/9PK
+pretrain_512/versionFB:
+pretrain_512/versionPK
+```
+
+```
+# strings out-bak/pretrain_512.pth | grep pretrain_512 | wc -l
+156
+```
+
+## 从之前的权重文件中加载，继续训练
+
+```
+$ grep -r pretrain_ *.py
+0-eval_pretrain.py:        ckp = f'./out/pretrain_{lm_config.dim}{moe_path}.pth'
+1-pretrain.py:            ckp = f'{args.save_dir}/pretrain_{lm_config.dim}{moe_path}.pth'
+1-pretrain.py:    parser.add_argument("--data_path", type=str, default="./dataset/pretrain_data.csv", help="Path to training data")
+3-full_sft.py:        ckp = f'./out/pretrain_{lm_config.dim}{moe_path}.pth'
+```
+
+```
+$ grep -r load_state_dict
+0-eval_pretrain.py:        model.load_state_dict(state_dict, strict=False)
+2-eval.py:        model.load_state_dict(state_dict, strict=False)
+3-full_sft.py:        model.load_state_dict(state_dict, strict=False)
+eval_ceval.py:        model.load_state_dict(state_dict, strict=False)
+export_model.py:    lm_model.load_state_dict(state_dict, strict=False)
+中文逐行注释/1-pretrain.py:    # model.load_state_dict(state_dict, strict=False)
+```
+
+```diff
+diff --git a/1-pretrain.py b/1-pretrain.py
+index d9b70e2..676f8ec 100644
+--- a/1-pretrain.py
++++ b/1-pretrain.py
+@@ -121,7 +121,22 @@ def init_model():
+
+     logger.info('init model')
+     model = Transformer(lm_config).to(args.device)
+-    # moe_path = '_moe' if lm_config.use_moe else ''
++
++    # load checkpoint
++    moe_path = '_moe' if lm_config.use_moe else ''
++    ckp = f'{args.save_dir}/pretrain_{lm_config.dim}{moe_path}.pth'
++    state_dict = torch.load(ckp, map_location=args.device)
++    # modify dict key to strip out the '_orig_mod.' prefix?
++    unwanted_prefix = '_orig_mod.'
++    for k, v in list(state_dict.items()):
++        logger.info('Loading checkpoint, state_dict: k: %s, v: %s', k, v)
++        if k.startswith(unwanted_prefix):
++            logger.info('state_dict: k: %s, v: %s', k[len(unwanted_prefix):], v)
++            state_dict[k[len(unwanted_prefix):]] = state_dict.pop(k)
++        else:
++            logger.info('Skpping, state_dict: k: %s, v: %s', k, v)
++    logger.info('model.load_state_dict')
++    model.load_state_dict(state_dict, strict=False)
+
+     Logger(f'LLM总参数量：{count_parameters(model) / 1e6:.3f} 百万')
+     return model, tokenizer
+```
+
 # 总体步骤
 
 > 2.4 python 1-pretrain.py 执行预训练，得到 pretrain_*.pth 作为预训练的输出权重

@@ -121,7 +121,22 @@ def init_model():
 
     logger.info('init model')
     model = Transformer(lm_config).to(args.device)
-    # moe_path = '_moe' if lm_config.use_moe else ''
+
+    # load checkpoint
+    moe_path = '_moe' if lm_config.use_moe else ''
+    ckp = f'{args.save_dir}/pretrain_{lm_config.dim}{moe_path}.pth'
+    state_dict = torch.load(ckp, map_location=args.device)
+    # modify dict key to strip out the '_orig_mod.' prefix?
+    unwanted_prefix = '_orig_mod.'
+    for k, v in list(state_dict.items()):
+        logger.info('Loading checkpoint, state_dict: k: %s, v: %s', k, v)
+        if k.startswith(unwanted_prefix):
+            logger.info('state_dict: k: %s, v: %s', k[len(unwanted_prefix):], v)
+            state_dict[k[len(unwanted_prefix):]] = state_dict.pop(k)
+        else:
+            logger.info('Skpping, state_dict: k: %s, v: %s', k, v)
+    logger.info('model.load_state_dict')
+    model.load_state_dict(state_dict, strict=False)
 
     Logger(f'LLM总参数量：{count_parameters(model) / 1e6:.3f} 百万')
     return model, tokenizer
@@ -223,5 +238,5 @@ if __name__ == "__main__":
     for epoch in range(args.epochs):
         train_epoch(epoch, wandb)
         # 训练 1 个 epoch 后自动关机
-        time.sleep(60)
-        os.system("/usr/bin/shutdown")
+        # time.sleep(60)
+        # os.system("/usr/bin/shutdown")
