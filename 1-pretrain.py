@@ -127,6 +127,9 @@ def init_model():
     ckp = f'{args.save_dir}/pretrain_{lm_config.dim}{moe_path}.pth'
     state_dict = torch.load(ckp, map_location=args.device)
     # modify dict key to strip out the '_orig_mod.' prefix?
+    # https://discuss.pytorch.org/t/state-dict-after-compile-and-onnx-export/180137
+    # https://clay-atlas.com/blog/2023/12/03/pytorch-compile-orig-mod-pref/
+    # https://github.com/pytorch/pytorch/pull/101651
     unwanted_prefix = '_orig_mod.'
     for k, v in list(state_dict.items()):
         logger.info('Loading checkpoint, state_dict: k: %s, v: %s', k, v)
