@@ -412,6 +412,65 @@ OptenAI的价值是非常高的，它可以给消费者带来很多的利润，�
 /root/.cache/huggingface/modules/transformers_modules/jingyaogong/minimind-v1-small/fad3b10dd5e251cb6f8050e5a3c8080efbccfdd2/model.py
 ```
 
+## 最终训练 3 个 epoch
+
+```
+2025-01-28 16:29:46,792 __main__ INFO Epoch:[1/20](41600/41914) loss:2.406 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:00,924 __main__ INFO Epoch:[1/20](41700/41914) loss:2.578 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:00,924 __main__ INFO Epoch:[1/20](41700/41914) loss:2.496 lr:0.0001956 epoch_Time:0.0min:
+Epoch:[1/20](41700/41914) loss:2.578 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:15,059 __main__ INFO Epoch:[1/20](41800/41914) loss:2.431 lr:0.0001956 epoch_Time:0.0min:
+Epoch:[1/20](41800/41914) loss:2.431 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:15,059 __main__ INFO Epoch:[1/20](41800/41914) loss:2.475 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:29,192 __main__ INFO Epoch:[1/20](41900/41914) loss:2.425 lr:0.0001956 epoch_Time:0.0min:
+Epoch:[1/20](41900/41914) loss:2.425 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:29,193 __main__ INFO Epoch:[1/20](41900/41914) loss:2.597 lr:0.0001956 epoch_Time:0.0min:
+
+2025-01-28 16:30:32,595 __main__ INFO Epoch:[2/20](0/41914) loss:2.641 lr:0.0001956 epoch_Time:594.0min:
+2025-01-28 16:30:32,595 __main__ INFO Epoch:[2/20](0/41914) loss:2.450 lr:0.0001956 epoch_Time:497.0min:
+Epoch:[2/20](0/41914) loss:2.450 lr:0.0001956 epoch_Time:497.0min:
+2025-01-28 16:30:46,743 __main__ INFO Epoch:[2/20](100/41914) loss:2.461 lr:0.0001956 epoch_Time:103.0min:
+2025-01-28 16:30:46,743 __main__ INFO Epoch:[2/20](100/41914) loss:2.422 lr:0.0001956 epoch_Time:104.0min:
+Epoch:[2/20](100/41914) loss:2.422 lr:0.0001956 epoch_Time:104.0min:
+2025-01-28 16:31:00,887 __main__ INFO Epoch:[2/20](200/41914) loss:2.478 lr:0.0001956 epoch_Time:101.0min:
+2025-01-28 16:31:00,887 __main__ INFO Epoch:[2/20](200/41914) loss:2.512 lr:0.0001956 epoch_Time:101.0min:
+Epoch:[2/20](200/41914) loss:2.512 lr:0.0001956 epoch_Time:101.0min:
+2025-01-28 16:31:15,061 __main__ INFO Epoch:[2/20](300/41914) loss:2.417 lr:0.0001956 epoch_Time:100.0min:
+2025-01-28 16:31:15,062 __main__ INFO Epoch:[2/20](300/41914) loss:2.600 lr:0.0001956 epoch_Time:100.0min:
+Epoch:[2/20](300/41914) loss:2.600 lr:0.0001956 epoch_Time:100.0min:
+```
+
+# wandb
+
+wandb: Using wandb-core as the SDK backend. Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: tclh123 (tclh123ai). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.18.3
+wandb: Run data is saved locally in /root/projects/minimind/wandb/run-20250128_170218-g6gfzutl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run MiniMind-Full-SFT-Epoch-19-BatchSize-32-LearningRate-1e-05
+wandb: ⭐️ View project at https://wandb.ai/tclh123ai/MiniMind-Full-SFT
+wandb: 🚀 View run at https://wandb.ai/tclh123ai/MiniMind-Full-SFT/runs/g6gfzutl
+
+# sft
+
+learning_rate 1e-5
+
+```
+LLM总参数量：26.878 百万
+Epoch:[0/19](0/61701) loss:3.074 lr:0.0000100 epoch_Time:1479.0min:
+Epoch:[0/19](100/61701) loss:2.683 lr:0.0000100 epoch_Time:87.0min:
+Epoch:[0/19](200/61701) loss:2.478 lr:0.0000100 epoch_Time:81.0min:
+Epoch:[0/19](300/61701) loss:2.589 lr:0.0000100 epoch_Time:79.0min:
+Epoch:[0/19](400/61701) loss:2.463 lr:0.0000100 epoch_Time:78.0min:
+Epoch:[0/19](500/61701) loss:2.461 lr:0.0000100 epoch_Time:77.0min:
+Epoch:[0/19](600/61701) loss:2.354 lr:0.0000100 epoch_Time:76.0min:
+Epoch:[0/19](700/61701) loss:2.446 lr:0.0000100 epoch_Time:76.0min:
+Epoch:[0/19](800/61701) loss:2.442 lr:0.0000100 epoch_Time:75.0min:
+```
+
+产物
+full_sft_512.pth
+
 # 总体步骤
 
 > 2.4 python 1-pretrain.py 执行预训练，得到 pretrain_*.pth 作为预训练的输出权重

@@ -142,7 +142,11 @@ if __name__ == "__main__":
         # x = tokenizer(prompt).data['input_ids']
         # x = (torch.tensor(x, dtype=torch.long, device=device)[None, ...])
 
-        res_y = model.generate(x, max_new_tokens=max_seq_len, temperature=temperature, do_sample=True)
+        attention_mask = model_inputs.attention_mask
+        pad_token_id = tokenizer.pad_token_id
+
+        res_y = model.generate(x, max_new_tokens=max_seq_len, temperature=temperature, do_sample=True,
+                               attention_mask=attention_mask, pad_token_id=pad_token_id)
         print('回答：', end='')
         generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(x, res_y)]
         response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]

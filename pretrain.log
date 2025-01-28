@@ -8580,3 +8580,125 @@ Epoch:[1/20](39300/41914) loss:2.485 lr:0.0001959 epoch_Time:7.0min:
 2025-01-28 16:24:35,590 __main__ INFO Epoch:[1/20](39400/41914) loss:2.555 lr:0.0001959 epoch_Time:7.0min:
 Epoch:[1/20](39400/41914) loss:2.555 lr:0.0001959 epoch_Time:7.0min:
 2025-01-28 16:24:35,591 __main__ INFO Epoch:[1/20](39400/41914) loss:2.401 lr:0.0001959 epoch_Time:7.0min:
+2025-01-28 16:24:49,725 __main__ INFO Epoch:[1/20](39500/41914) loss:2.433 lr:0.0001958 epoch_Time:6.0min:
+Epoch:[1/20](39500/41914) loss:2.433 lr:0.0001958 epoch_Time:6.0min:
+2025-01-28 16:24:49,725 __main__ INFO Epoch:[1/20](39500/41914) loss:2.493 lr:0.0001958 epoch_Time:6.0min:
+2025-01-28 16:25:03,861 __main__ INFO Epoch:[1/20](39600/41914) loss:2.446 lr:0.0001958 epoch_Time:6.0min:
+Epoch:[1/20](39600/41914) loss:2.446 lr:0.0001958 epoch_Time:6.0min:
+2025-01-28 16:25:03,862 __main__ INFO Epoch:[1/20](39600/41914) loss:2.502 lr:0.0001958 epoch_Time:6.0min:
+2025-01-28 16:25:17,995 __main__ INFO Epoch:[1/20](39700/41914) loss:2.605 lr:0.0001958 epoch_Time:6.0min:
+2025-01-28 16:25:17,995 __main__ INFO Epoch:[1/20](39700/41914) loss:2.550 lr:0.0001958 epoch_Time:6.0min:
+Epoch:[1/20](39700/41914) loss:2.550 lr:0.0001958 epoch_Time:6.0min:
+2025-01-28 16:25:32,137 __main__ INFO Epoch:[1/20](39800/41914) loss:2.433 lr:0.0001958 epoch_Time:6.0min:
+Epoch:[1/20](39800/41914) loss:2.433 lr:0.0001958 epoch_Time:6.0min:
+2025-01-28 16:25:32,138 __main__ INFO Epoch:[1/20](39800/41914) loss:2.567 lr:0.0001958 epoch_Time:6.0min:
+2025-01-28 16:25:46,271 __main__ INFO Epoch:[1/20](39900/41914) loss:2.495 lr:0.0001958 epoch_Time:5.0min:
+Epoch:[1/20](39900/41914) loss:2.495 lr:0.0001958 epoch_Time:5.0min:
+2025-01-28 16:25:46,271 __main__ INFO Epoch:[1/20](39900/41914) loss:2.511 lr:0.0001958 epoch_Time:5.0min:
+2025-01-28 16:26:00,269 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 16:26:00,376 __main__ INFO Model train..
+2025-01-28 16:26:00,517 __main__ INFO Epoch:[1/20](40000/41914) loss:2.492 lr:0.0001958 epoch_Time:5.0min:
+2025-01-28 16:26:00,517 __main__ INFO Epoch:[1/20](40000/41914) loss:2.481 lr:0.0001958 epoch_Time:5.0min:
+Epoch:[1/20](40000/41914) loss:2.492 lr:0.0001958 epoch_Time:5.0min:
+2025-01-28 16:26:14,651 __main__ INFO Epoch:[1/20](40100/41914) loss:2.632 lr:0.0001958 epoch_Time:5.0min:
+Epoch:[1/20](40100/41914) loss:2.632 lr:0.0001958 epoch_Time:5.0min:
+2025-01-28 16:26:14,651 __main__ INFO Epoch:[1/20](40100/41914) loss:2.348 lr:0.0001958 epoch_Time:5.0min:
+2025-01-28 16:26:28,789 __main__ INFO Epoch:[1/20](40200/41914) loss:2.649 lr:0.0001958 epoch_Time:5.0min:
+Epoch:[1/20](40200/41914) loss:2.649 lr:0.0001958 epoch_Time:5.0min:
+2025-01-28 16:26:28,789 __main__ INFO Epoch:[1/20](40200/41914) loss:2.527 lr:0.0001958 epoch_Time:5.0min:
+2025-01-28 16:26:42,923 __main__ INFO Epoch:[1/20](40300/41914) loss:2.463 lr:0.0001958 epoch_Time:3.0min:
+Epoch:[1/20](40300/41914) loss:2.463 lr:0.0001958 epoch_Time:3.0min:
+2025-01-28 16:26:42,924 __main__ INFO Epoch:[1/20](40300/41914) loss:2.419 lr:0.0001958 epoch_Time:3.0min:
+2025-01-28 16:26:57,061 __main__ INFO Epoch:[1/20](40400/41914) loss:2.627 lr:0.0001958 epoch_Time:3.0min:
+Epoch:[1/20](40400/41914) loss:2.627 lr:0.0001958 epoch_Time:3.0min:
+2025-01-28 16:26:57,061 __main__ INFO Epoch:[1/20](40400/41914) loss:2.395 lr:0.0001958 epoch_Time:3.0min:
+2025-01-28 16:27:11,194 __main__ INFO Epoch:[1/20](40500/41914) loss:2.536 lr:0.0001957 epoch_Time:3.0min:
+Epoch:[1/20](40500/41914) loss:2.536 lr:0.0001957 epoch_Time:3.0min:
+2025-01-28 16:27:11,194 __main__ INFO Epoch:[1/20](40500/41914) loss:2.682 lr:0.0001957 epoch_Time:3.0min:
+2025-01-28 16:27:25,330 __main__ INFO Epoch:[1/20](40600/41914) loss:2.509 lr:0.0001957 epoch_Time:3.0min:
+Epoch:[1/20](40600/41914) loss:2.509 lr:0.0001957 epoch_Time:3.0min:
+2025-01-28 16:27:25,331 __main__ INFO Epoch:[1/20](40600/41914) loss:2.349 lr:0.0001957 epoch_Time:3.0min:
+2025-01-28 16:27:39,465 __main__ INFO Epoch:[1/20](40700/41914) loss:2.552 lr:0.0001957 epoch_Time:2.0min:
+Epoch:[1/20](40700/41914) loss:2.552 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:27:39,465 __main__ INFO Epoch:[1/20](40700/41914) loss:2.379 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:27:53,602 __main__ INFO Epoch:[1/20](40800/41914) loss:2.602 lr:0.0001957 epoch_Time:2.0min:
+Epoch:[1/20](40800/41914) loss:2.602 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:27:53,602 __main__ INFO Epoch:[1/20](40800/41914) loss:2.402 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:28:07,744 __main__ INFO Epoch:[1/20](40900/41914) loss:2.616 lr:0.0001957 epoch_Time:2.0min:
+Epoch:[1/20](40900/41914) loss:2.616 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:28:07,744 __main__ INFO Epoch:[1/20](40900/41914) loss:2.424 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:28:21,742 __main__ INFO Save checkpoint to out/pretrain_512.pth
+2025-01-28 16:28:21,843 __main__ INFO Model train..
+2025-01-28 16:28:21,984 __main__ INFO Epoch:[1/20](41000/41914) loss:2.431 lr:0.0001957 epoch_Time:2.0min:
+Epoch:[1/20](41000/41914) loss:2.431 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:28:21,984 __main__ INFO Epoch:[1/20](41000/41914) loss:2.477 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:28:36,117 __main__ INFO Epoch:[1/20](41100/41914) loss:2.484 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:28:36,117 __main__ INFO Epoch:[1/20](41100/41914) loss:2.577 lr:0.0001957 epoch_Time:2.0min:
+Epoch:[1/20](41100/41914) loss:2.484 lr:0.0001957 epoch_Time:2.0min:
+2025-01-28 16:28:50,253 __main__ INFO Epoch:[1/20](41200/41914) loss:2.527 lr:0.0001957 epoch_Time:1.0min:
+Epoch:[1/20](41200/41914) loss:2.527 lr:0.0001957 epoch_Time:1.0min:
+2025-01-28 16:28:50,253 __main__ INFO Epoch:[1/20](41200/41914) loss:2.545 lr:0.0001957 epoch_Time:1.0min:
+2025-01-28 16:29:04,386 __main__ INFO Epoch:[1/20](41300/41914) loss:2.473 lr:0.0001957 epoch_Time:1.0min:
+Epoch:[1/20](41300/41914) loss:2.473 lr:0.0001957 epoch_Time:1.0min:
+2025-01-28 16:29:04,386 __main__ INFO Epoch:[1/20](41300/41914) loss:2.474 lr:0.0001957 epoch_Time:1.0min:
+2025-01-28 16:29:18,521 __main__ INFO Epoch:[1/20](41400/41914) loss:2.669 lr:0.0001956 epoch_Time:1.0min:
+Epoch:[1/20](41400/41914) loss:2.669 lr:0.0001956 epoch_Time:1.0min:
+2025-01-28 16:29:18,521 __main__ INFO Epoch:[1/20](41400/41914) loss:2.591 lr:0.0001956 epoch_Time:1.0min:
+2025-01-28 16:29:32,655 __main__ INFO Epoch:[1/20](41500/41914) loss:2.473 lr:0.0001956 epoch_Time:1.0min:
+2025-01-28 16:29:32,655 __main__ INFO Epoch:[1/20](41500/41914) loss:2.443 lr:0.0001956 epoch_Time:1.0min:
+Epoch:[1/20](41500/41914) loss:2.473 lr:0.0001956 epoch_Time:1.0min:
+2025-01-28 16:29:46,792 __main__ INFO Epoch:[1/20](41600/41914) loss:2.468 lr:0.0001956 epoch_Time:0.0min:
+Epoch:[1/20](41600/41914) loss:2.468 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:29:46,792 __main__ INFO Epoch:[1/20](41600/41914) loss:2.406 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:00,924 __main__ INFO Epoch:[1/20](41700/41914) loss:2.578 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:00,924 __main__ INFO Epoch:[1/20](41700/41914) loss:2.496 lr:0.0001956 epoch_Time:0.0min:
+Epoch:[1/20](41700/41914) loss:2.578 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:15,059 __main__ INFO Epoch:[1/20](41800/41914) loss:2.431 lr:0.0001956 epoch_Time:0.0min:
+Epoch:[1/20](41800/41914) loss:2.431 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:15,059 __main__ INFO Epoch:[1/20](41800/41914) loss:2.475 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:29,192 __main__ INFO Epoch:[1/20](41900/41914) loss:2.425 lr:0.0001956 epoch_Time:0.0min:
+Epoch:[1/20](41900/41914) loss:2.425 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:29,193 __main__ INFO Epoch:[1/20](41900/41914) loss:2.597 lr:0.0001956 epoch_Time:0.0min:
+2025-01-28 16:30:32,595 __main__ INFO Epoch:[2/20](0/41914) loss:2.641 lr:0.0001956 epoch_Time:594.0min:
+2025-01-28 16:30:32,595 __main__ INFO Epoch:[2/20](0/41914) loss:2.450 lr:0.0001956 epoch_Time:497.0min:
+Epoch:[2/20](0/41914) loss:2.450 lr:0.0001956 epoch_Time:497.0min:
+2025-01-28 16:30:46,743 __main__ INFO Epoch:[2/20](100/41914) loss:2.461 lr:0.0001956 epoch_Time:103.0min:
+2025-01-28 16:30:46,743 __main__ INFO Epoch:[2/20](100/41914) loss:2.422 lr:0.0001956 epoch_Time:104.0min:
+Epoch:[2/20](100/41914) loss:2.422 lr:0.0001956 epoch_Time:104.0min:
+2025-01-28 16:31:00,887 __main__ INFO Epoch:[2/20](200/41914) loss:2.478 lr:0.0001956 epoch_Time:101.0min:
+2025-01-28 16:31:00,887 __main__ INFO Epoch:[2/20](200/41914) loss:2.512 lr:0.0001956 epoch_Time:101.0min:
+Epoch:[2/20](200/41914) loss:2.512 lr:0.0001956 epoch_Time:101.0min:
+2025-01-28 16:31:15,061 __main__ INFO Epoch:[2/20](300/41914) loss:2.417 lr:0.0001956 epoch_Time:100.0min:
+2025-01-28 16:31:15,062 __main__ INFO Epoch:[2/20](300/41914) loss:2.600 lr:0.0001956 epoch_Time:100.0min:
+Epoch:[2/20](300/41914) loss:2.600 lr:0.0001956 epoch_Time:100.0min:
+W0128 16:31:26.294000 140683983710016 torch/distributed/elastic/agent/server/api.py:741] Received 15 death signal, shutting down workers
+W0128 16:31:26.296000 140683983710016 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 9160 closing signal SIGTERM
+W0128 16:31:26.296000 140683983710016 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 9161 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/root/miniconda3/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/run.py", line 879, in main
+    run(args)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 254, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 733, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 876, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 76, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 9125 got signal: 15

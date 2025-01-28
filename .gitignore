@@ -1,6 +1,6 @@
 # /model/__pycache__
 /dataset
-# /wandb
+/wandb
 /out
 /out-bak
 
