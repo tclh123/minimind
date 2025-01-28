@@ -601,6 +601,18 @@ OrderedDict({'tok_embeddings.weight': tensor([[ 0.0137,  0.0112,  0.0259,  ..., 
 
 full_sft_512-202501281935.pth
 
+# LoRA
+
+```python
+from peft import get_peft_model, LoraConfig, TaskType
+```
+
+# DPO
+
+```python
+from trl import DPOConfig, DPOTrainer
+```
+
 # 总体步骤
 
 > 2.4 python 1-pretrain.py 执行预训练，得到 pretrain_*.pth 作为预训练的输出权重
