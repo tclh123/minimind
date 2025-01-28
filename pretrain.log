@@ -8577,3 +8577,6 @@ Epoch:[1/20](39200/41914) loss:2.381 lr:0.0001959 epoch_Time:7.0min:
 2025-01-28 16:24:21,455 __main__ INFO Epoch:[1/20](39300/41914) loss:2.485 lr:0.0001959 epoch_Time:7.0min:
 Epoch:[1/20](39300/41914) loss:2.485 lr:0.0001959 epoch_Time:7.0min:
 2025-01-28 16:24:21,455 __main__ INFO Epoch:[1/20](39300/41914) loss:2.370 lr:0.0001959 epoch_Time:7.0min:
+2025-01-28 16:24:35,590 __main__ INFO Epoch:[1/20](39400/41914) loss:2.555 lr:0.0001959 epoch_Time:7.0min:
+Epoch:[1/20](39400/41914) loss:2.555 lr:0.0001959 epoch_Time:7.0min:
+2025-01-28 16:24:35,591 __main__ INFO Epoch:[1/20](39400/41914) loss:2.401 lr:0.0001959 epoch_Time:7.0min:
