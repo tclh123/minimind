@@ -620,6 +620,46 @@ from trl import DPOConfig, DPOTrainer
 > 2.6 python 4-lora_sft.py 执行lora微调（非必须）
 > 2.7 python 5-dpo_train.py 执行DPO人类偏好强化学习对齐（非必须）
 
+# 模型
+
+https://github.com/jingyaogong/minimind/blob/master/images/LLM-structure.png
+
+```
+# grep 'nn\.' model/model.py
+import torch.nn.functional as F
+class RMSNorm(torch.nn.Module):
+        self.weight = nn.Parameter(torch.ones(dim))
+class Attention(nn.Module):
+        self.wq = nn.Linear(args.dim, args.n_heads * self.head_dim, bias=False)
+        self.wk = nn.Linear(args.dim, self.n_kv_heads * self.head_dim, bias=False)
+        self.wv = nn.Linear(args.dim, self.n_kv_heads * self.head_dim, bias=False)
+        self.wo = nn.Linear(args.n_heads * self.head_dim, args.dim, bias=False)
+        self.attn_dropout = nn.Dropout(args.dropout)
+        self.resid_dropout = nn.Dropout(args.dropout)
+        self.flash = hasattr(torch.nn.functional, 'scaled_dot_product_attention') and args.flash_attn
+            output = torch.nn.functional.scaled_dot_product_attention(xq, xk, xv, attn_mask=None,
+class FeedForward(nn.Module):
+        self.w1 = nn.Linear(dim, hidden_dim, bias=False)
+        self.w2 = nn.Linear(hidden_dim, dim, bias=False)
+        self.w3 = nn.Linear(dim, hidden_dim, bias=False)
+        self.dropout = nn.Dropout(dropout)
+class MoEGate(nn.Module):
+        self.weight = nn.Parameter(torch.empty((self.n_routed_experts, self.gating_dim)))
+        import torch.nn.init as init
+class MOEFeedForward(nn.Module):
+        self.experts = nn.ModuleList([
+class TransformerBlock(nn.Module):
+        self.tok_embeddings = nn.Embedding(params.vocab_size, params.dim)
+        self.dropout = nn.Dropout(params.dropout)
+        self.layers = torch.nn.ModuleList()
+        self.output = nn.Linear(params.dim, params.vocab_size, bias=False)
+                torch.nn.init.normal_(p, mean=0.0, std=0.02 / math.sqrt(2 * params.n_layers))
+        if isinstance(module, nn.Linear):
+            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+                torch.nn.init.zeros_(module.bias)
+        elif isinstance(module, nn.Embedding):
+            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+```
 
 # Others
 

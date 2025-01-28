@@ -35,6 +35,8 @@ def precompute_pos_cis(dim: int, end: int, theta: float = 10000.0):
     return pos_cis
 
 
+# 旋转位置编码 RoPE(Rotary Position Embedding)
+# 参考 https://github.com/meta-llama/llama/blob/main/llama/model.py#L132
 def apply_rotary_emb(xq, xk, pos_cis):
     def unite_shape(pos_cis, x):
         ndim = x.ndim
