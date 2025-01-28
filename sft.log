@@ -1145,3 +1145,165 @@ Epoch:[1/19](51600/61701) loss:1.994 lr:0.0000098 epoch_Time:12.0min:
 Epoch:[1/19](51700/61701) loss:2.015 lr:0.0000098 epoch_Time:12.0min:
 Epoch:[1/19](51800/61701) loss:2.057 lr:0.0000098 epoch_Time:12.0min:
 Epoch:[1/19](51900/61701) loss:1.989 lr:0.0000098 epoch_Time:11.0min:
+Epoch:[1/19](52000/61701) loss:1.986 lr:0.0000098 epoch_Time:11.0min:
+Epoch:[1/19](52100/61701) loss:1.757 lr:0.0000098 epoch_Time:11.0min:
+Epoch:[1/19](52200/61701) loss:1.840 lr:0.0000098 epoch_Time:11.0min:
+Epoch:[1/19](52300/61701) loss:1.820 lr:0.0000098 epoch_Time:11.0min:
+Epoch:[1/19](52400/61701) loss:1.892 lr:0.0000098 epoch_Time:11.0min:
+Epoch:[1/19](52500/61701) loss:1.727 lr:0.0000098 epoch_Time:11.0min:
+Epoch:[1/19](52600/61701) loss:1.865 lr:0.0000098 epoch_Time:11.0min:
+Epoch:[1/19](52700/61701) loss:2.020 lr:0.0000098 epoch_Time:10.0min:
+Epoch:[1/19](52800/61701) loss:1.671 lr:0.0000098 epoch_Time:10.0min:
+Epoch:[1/19](52900/61701) loss:1.945 lr:0.0000098 epoch_Time:10.0min:
+Epoch:[1/19](53000/61701) loss:1.973 lr:0.0000098 epoch_Time:10.0min:
+Epoch:[1/19](53100/61701) loss:1.967 lr:0.0000098 epoch_Time:10.0min:
+Epoch:[1/19](53200/61701) loss:1.998 lr:0.0000098 epoch_Time:10.0min:
+Epoch:[1/19](53300/61701) loss:1.927 lr:0.0000098 epoch_Time:10.0min:
+Epoch:[1/19](53400/61701) loss:1.763 lr:0.0000098 epoch_Time:10.0min:
+Epoch:[1/19](53500/61701) loss:1.971 lr:0.0000098 epoch_Time:10.0min:
+Epoch:[1/19](53600/61701) loss:1.947 lr:0.0000098 epoch_Time:9.0min:
+Epoch:[1/19](53700/61701) loss:1.792 lr:0.0000098 epoch_Time:9.0min:
+Epoch:[1/19](53800/61701) loss:1.811 lr:0.0000098 epoch_Time:9.0min:
+Epoch:[1/19](53900/61701) loss:1.817 lr:0.0000098 epoch_Time:9.0min:
+Epoch:[1/19](54000/61701) loss:1.833 lr:0.0000098 epoch_Time:9.0min:
+Epoch:[1/19](54100/61701) loss:1.937 lr:0.0000098 epoch_Time:9.0min:
+Epoch:[1/19](54200/61701) loss:1.898 lr:0.0000098 epoch_Time:9.0min:
+Epoch:[1/19](54300/61701) loss:1.842 lr:0.0000098 epoch_Time:9.0min:
+Epoch:[1/19](54400/61701) loss:1.773 lr:0.0000098 epoch_Time:8.0min:
+Epoch:[1/19](54500/61701) loss:2.081 lr:0.0000098 epoch_Time:8.0min:
+Epoch:[1/19](54600/61701) loss:1.807 lr:0.0000098 epoch_Time:8.0min:
+Epoch:[1/19](54700/61701) loss:1.759 lr:0.0000098 epoch_Time:8.0min:
+Epoch:[1/19](54800/61701) loss:2.158 lr:0.0000098 epoch_Time:8.0min:
+Epoch:[1/19](54900/61701) loss:1.749 lr:0.0000098 epoch_Time:8.0min:
+Epoch:[1/19](55000/61701) loss:2.237 lr:0.0000098 epoch_Time:8.0min:
+Epoch:[1/19](55100/61701) loss:1.773 lr:0.0000098 epoch_Time:8.0min:
+Epoch:[1/19](55200/61701) loss:1.971 lr:0.0000098 epoch_Time:7.0min:
+Epoch:[1/19](55300/61701) loss:1.713 lr:0.0000098 epoch_Time:7.0min:
+Epoch:[1/19](55400/61701) loss:1.639 lr:0.0000098 epoch_Time:7.0min:
+Epoch:[1/19](55500/61701) loss:1.944 lr:0.0000098 epoch_Time:7.0min:
+Epoch:[1/19](55600/61701) loss:1.993 lr:0.0000098 epoch_Time:7.0min:
+Epoch:[1/19](55700/61701) loss:1.851 lr:0.0000098 epoch_Time:7.0min:
+Epoch:[1/19](55800/61701) loss:1.869 lr:0.0000098 epoch_Time:7.0min:
+Epoch:[1/19](55900/61701) loss:1.775 lr:0.0000098 epoch_Time:7.0min:
+Epoch:[1/19](56000/61701) loss:1.876 lr:0.0000098 epoch_Time:6.0min:
+Epoch:[1/19](56100/61701) loss:2.006 lr:0.0000098 epoch_Time:6.0min:
+Epoch:[1/19](56200/61701) loss:2.051 lr:0.0000098 epoch_Time:6.0min:
+Epoch:[1/19](56300/61701) loss:1.883 lr:0.0000098 epoch_Time:6.0min:
+Epoch:[1/19](56400/61701) loss:1.698 lr:0.0000098 epoch_Time:6.0min:
+Epoch:[1/19](56500/61701) loss:1.918 lr:0.0000098 epoch_Time:6.0min:
+Epoch:[1/19](56600/61701) loss:1.802 lr:0.0000098 epoch_Time:6.0min:
+Epoch:[1/19](56700/61701) loss:1.772 lr:0.0000098 epoch_Time:6.0min:
+Epoch:[1/19](56800/61701) loss:2.002 lr:0.0000098 epoch_Time:6.0min:
+Epoch:[1/19](56900/61701) loss:1.868 lr:0.0000098 epoch_Time:5.0min:
+Epoch:[1/19](57000/61701) loss:1.852 lr:0.0000098 epoch_Time:5.0min:
+Epoch:[1/19](57100/61701) loss:1.812 lr:0.0000098 epoch_Time:5.0min:
+Epoch:[1/19](57200/61701) loss:1.798 lr:0.0000098 epoch_Time:5.0min:
+Epoch:[1/19](57300/61701) loss:1.915 lr:0.0000098 epoch_Time:5.0min:
+Epoch:[1/19](57400/61701) loss:2.027 lr:0.0000098 epoch_Time:5.0min:
+Epoch:[1/19](57500/61701) loss:1.790 lr:0.0000098 epoch_Time:5.0min:
+Epoch:[1/19](57600/61701) loss:1.800 lr:0.0000098 epoch_Time:5.0min:
+Epoch:[1/19](57700/61701) loss:1.810 lr:0.0000098 epoch_Time:4.0min:
+Epoch:[1/19](57800/61701) loss:1.885 lr:0.0000098 epoch_Time:4.0min:
+Epoch:[1/19](57900/61701) loss:2.084 lr:0.0000098 epoch_Time:4.0min:
+Epoch:[1/19](58000/61701) loss:1.948 lr:0.0000098 epoch_Time:4.0min:
+Epoch:[1/19](58100/61701) loss:1.900 lr:0.0000098 epoch_Time:4.0min:
+Epoch:[1/19](58200/61701) loss:2.006 lr:0.0000098 epoch_Time:4.0min:
+Epoch:[1/19](58300/61701) loss:2.069 lr:0.0000098 epoch_Time:4.0min:
+Epoch:[1/19](58400/61701) loss:1.851 lr:0.0000098 epoch_Time:4.0min:
+Epoch:[1/19](58500/61701) loss:1.906 lr:0.0000098 epoch_Time:3.0min:
+Epoch:[1/19](58600/61701) loss:2.149 lr:0.0000098 epoch_Time:3.0min:
+Epoch:[1/19](58700/61701) loss:2.132 lr:0.0000098 epoch_Time:3.0min:
+Epoch:[1/19](58800/61701) loss:1.966 lr:0.0000098 epoch_Time:3.0min:
+Epoch:[1/19](58900/61701) loss:1.939 lr:0.0000098 epoch_Time:3.0min:
+Epoch:[1/19](59000/61701) loss:1.912 lr:0.0000098 epoch_Time:3.0min:
+Epoch:[1/19](59100/61701) loss:1.901 lr:0.0000098 epoch_Time:3.0min:
+Epoch:[1/19](59200/61701) loss:2.213 lr:0.0000098 epoch_Time:3.0min:
+Epoch:[1/19](59300/61701) loss:1.715 lr:0.0000098 epoch_Time:2.0min:
+Epoch:[1/19](59400/61701) loss:1.975 lr:0.0000098 epoch_Time:2.0min:
+Epoch:[1/19](59500/61701) loss:2.211 lr:0.0000098 epoch_Time:2.0min:
+Epoch:[1/19](59600/61701) loss:1.861 lr:0.0000098 epoch_Time:2.0min:
+Epoch:[1/19](59700/61701) loss:1.695 lr:0.0000098 epoch_Time:2.0min:
+Epoch:[1/19](59800/61701) loss:2.004 lr:0.0000098 epoch_Time:2.0min:
+Epoch:[1/19](59900/61701) loss:1.977 lr:0.0000098 epoch_Time:2.0min:
+Epoch:[1/19](60000/61701) loss:2.022 lr:0.0000098 epoch_Time:2.0min:
+Epoch:[1/19](60100/61701) loss:1.888 lr:0.0000098 epoch_Time:2.0min:
+Epoch:[1/19](60200/61701) loss:1.840 lr:0.0000098 epoch_Time:1.0min:
+Epoch:[1/19](60300/61701) loss:1.849 lr:0.0000098 epoch_Time:1.0min:
+Epoch:[1/19](60400/61701) loss:1.634 lr:0.0000098 epoch_Time:1.0min:
+Epoch:[1/19](60500/61701) loss:2.016 lr:0.0000098 epoch_Time:1.0min:
+Epoch:[1/19](60600/61701) loss:2.016 lr:0.0000098 epoch_Time:1.0min:
+Epoch:[1/19](60700/61701) loss:1.857 lr:0.0000098 epoch_Time:1.0min:
+Epoch:[1/19](60800/61701) loss:1.761 lr:0.0000098 epoch_Time:1.0min:
+Epoch:[1/19](60900/61701) loss:2.082 lr:0.0000098 epoch_Time:1.0min:
+Epoch:[1/19](61000/61701) loss:1.830 lr:0.0000098 epoch_Time:0.0min:
+Epoch:[1/19](61100/61701) loss:1.824 lr:0.0000098 epoch_Time:0.0min:
+Epoch:[1/19](61200/61701) loss:1.859 lr:0.0000098 epoch_Time:0.0min:
+Epoch:[1/19](61300/61701) loss:1.802 lr:0.0000098 epoch_Time:0.0min:
+Epoch:[1/19](61400/61701) loss:2.223 lr:0.0000098 epoch_Time:0.0min:
+Epoch:[1/19](61500/61701) loss:1.802 lr:0.0000098 epoch_Time:0.0min:
+Epoch:[1/19](61600/61701) loss:1.844 lr:0.0000098 epoch_Time:0.0min:
+Epoch:[1/19](61700/61701) loss:1.794 lr:0.0000098 epoch_Time:0.0min:
+Epoch:[2/19](0/61701) loss:2.067 lr:0.0000098 epoch_Time:773.0min:
+Epoch:[2/19](100/61701) loss:1.938 lr:0.0000098 epoch_Time:81.0min:
+Epoch:[2/19](200/61701) loss:1.887 lr:0.0000098 epoch_Time:77.0min:
+Epoch:[2/19](300/61701) loss:1.950 lr:0.0000098 epoch_Time:76.0min:
+Epoch:[2/19](400/61701) loss:1.937 lr:0.0000098 epoch_Time:76.0min:
+Epoch:[2/19](500/61701) loss:1.755 lr:0.0000098 epoch_Time:75.0min:
+Epoch:[2/19](600/61701) loss:1.776 lr:0.0000098 epoch_Time:75.0min:
+Epoch:[2/19](700/61701) loss:1.857 lr:0.0000098 epoch_Time:75.0min:
+Epoch:[2/19](800/61701) loss:1.922 lr:0.0000098 epoch_Time:75.0min:
+Epoch:[2/19](900/61701) loss:1.833 lr:0.0000098 epoch_Time:74.0min:
+Epoch:[2/19](1000/61701) loss:1.820 lr:0.0000098 epoch_Time:74.0min:
+Epoch:[2/19](1100/61701) loss:1.956 lr:0.0000098 epoch_Time:74.0min:
+Epoch:[2/19](1200/61701) loss:1.947 lr:0.0000098 epoch_Time:74.0min:
+Epoch:[2/19](1300/61701) loss:1.785 lr:0.0000098 epoch_Time:74.0min:
+Epoch:[2/19](1400/61701) loss:2.228 lr:0.0000098 epoch_Time:74.0min:
+Epoch:[2/19](1500/61701) loss:1.985 lr:0.0000098 epoch_Time:74.0min:
+Epoch:[2/19](1600/61701) loss:1.807 lr:0.0000097 epoch_Time:74.0min:
+Epoch:[2/19](1700/61701) loss:1.938 lr:0.0000097 epoch_Time:73.0min:
+Epoch:[2/19](1800/61701) loss:1.946 lr:0.0000097 epoch_Time:73.0min:
+Epoch:[2/19](1900/61701) loss:1.856 lr:0.0000097 epoch_Time:73.0min:
+Epoch:[2/19](2000/61701) loss:2.017 lr:0.0000097 epoch_Time:73.0min:
+Epoch:[2/19](2100/61701) loss:1.803 lr:0.0000097 epoch_Time:73.0min:
+Epoch:[2/19](2200/61701) loss:1.934 lr:0.0000097 epoch_Time:73.0min:
+Epoch:[2/19](2300/61701) loss:2.033 lr:0.0000097 epoch_Time:73.0min:
+Epoch:[2/19](2400/61701) loss:1.604 lr:0.0000097 epoch_Time:73.0min:
+Epoch:[2/19](2500/61701) loss:1.933 lr:0.0000097 epoch_Time:72.0min:
+Epoch:[2/19](2600/61701) loss:2.070 lr:0.0000097 epoch_Time:72.0min:
+Epoch:[2/19](2700/61701) loss:1.948 lr:0.0000097 epoch_Time:72.0min:
+Epoch:[2/19](2800/61701) loss:2.148 lr:0.0000097 epoch_Time:72.0min:
+Epoch:[2/19](2900/61701) loss:1.783 lr:0.0000097 epoch_Time:72.0min:
+Epoch:[2/19](3000/61701) loss:1.919 lr:0.0000097 epoch_Time:72.0min:
+Epoch:[2/19](3100/61701) loss:2.202 lr:0.0000097 epoch_Time:72.0min:
+Epoch:[2/19](3200/61701) loss:2.040 lr:0.0000097 epoch_Time:72.0min:
+W0128 19:35:49.279000 140509029828416 torch/distributed/elastic/agent/server/api.py:741] Received 15 death signal, shutting down workers
+W0128 19:35:49.281000 140509029828416 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 43737 closing signal SIGTERM
+W0128 19:35:49.282000 140509029828416 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 43738 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/root/miniconda3/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/run.py", line 879, in main
+    run(args)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 254, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 733, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 876, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 76, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 43700 got signal: 15

@@ -105,6 +105,16 @@ The cache for model files in Transformers v4.22.0 has been updated. Migrating yo
 tokenizer词表大小： 6400
 ```
 
+## links
+
+https://github.com/mobvoi/seq-monkey-data/blob/main/docs/pretrain_open_corpus.md
+
+https://hf-mirror.com/datasets/Skywork/SkyPile-150B/tree/main/data
+
+https://www.modelscope.cn/datasets/deepctrl/deepctrl-sft-data
+
+https://github.com/HIT-SCIR/huozi
+
 # pretrain
 
 ## 环境测试
@@ -505,6 +515,8 @@ wandb: Syncing run MiniMind-Full-SFT-Epoch-19-BatchSize-32-LearningRate-1e-05
 wandb: ⭐️ View project at https://wandb.ai/tclh123ai/MiniMind-Full-SFT
 wandb: 🚀 View run at https://wandb.ai/tclh123ai/MiniMind-Full-SFT/runs/g6gfzutl
 
+token 保存在 /root/.netrc
+
 # sft
 
 learning_rate 1e-5
@@ -552,6 +564,43 @@ Tue Jan 28 17:43:55 2025
 +-----------------------------------------------------------------------------------------+
 ```
 
+## examine checkpoint
+
+```
+# ls -lhtr out/full_sft_512.pth
+-rw-r--r-- 1 root root 103M Jan 28 19:35 out/full_sft_512.pth
+```
+
+checkpoint pth 文件，类似 python pickle，是通过 torch save 出来的，本质是一个 OrderedDict
+
+key 为 `'layers.0.attention.wk.weight', 'layers.0.attention.wo.weight', 'layers.0.attention.wq.weight', 'layers.0.attention.wv.weight', 'layers.0.attention_norm.weight', 'layers.0.feed_forward.w1.weight', 'layers.0.feed_forward.w2.weight', 'layers.0.feed_forward.w3.weight', 'layers.0.ffn_norm.weight'` 等
+
+value 为 tensor（类似多维数组）
+
+```python
+>>> import torch
+>>> torch.load('out/full_sft_512-202501281935.pth')
+OrderedDict({'tok_embeddings.weight': tensor([[ 0.0137,  0.0112,  0.0259,  ...,  0.1016, -0.0027,  0.0647],
+        [ 0.0089,  0.0086, -0.0116,  ...,  0.0088,  0.0080, -0.0087],
+        [-0.0655, -0.0409,  0.0204,  ...,  0.0202, -0.1403,  0.0709],
+        ...,
+        [-0.0465,  0.1162, -0.0295,  ...,  0.0224,  0.0357,  0.0184],
+        [ 0.0017,  0.0303, -0.0013,  ...,  0.0838, -0.0146,  0.0370],
+        [ 0.0603,  0.0180,  0.0171,  ...,  0.0702,  0.0107,  0.0306]],
+       device='cuda:0'), 'layers.0.attention.wq.weight': tensor([[ 0.0173,  0.0184,  0.0099,  ..., -0.0187, -0.0276, -0.0560],
+
+>>> print(type(x))
+<class 'collections.OrderedDict'>
+
+>>> sorted(x.keys())
+['layers.0.attention.wk.weight', 'layers.0.attention.wo.weight', 'layers.0.attention.wq.weight', 'layers.0.attention.wv.weight', 'layers.0.attention_norm.weight', 'layers.0.feed_forward.w1.weight', 'layers.0.feed_forward.w2.weight', 'layers.0.feed_forward.w3.weight', 'layers.0.ffn_norm.weight', 'layers.1.attention.wk.weight', 'layers.1.attention.wo.weight', 'layers.1.attention.wq.weight', 'layers.1.attention.wv.weight', 'layers.1.attention_norm.weight', 'layers.1.feed_forward.w1.weight', 'layers.1.feed_forward.w2.weight', 'layers.1.feed_forward.w3.weight', 'layers.1.ffn_norm.weight', 'layers.2.attention.wk.weight', 'layers.2.attention.wo.weight', 'layers.2.attention.wq.weight', 'layers.2.attention.wv.weight', 'layers.2.attention_norm.weight', 'layers.2.feed_forward.w1.weight', 'layers.2.feed_forward.w2.weight', 'layers.2.feed_forward.w3.weight', 'layers.2.ffn_norm.weight', 'layers.3.attention.wk.weight', 'layers.3.attention.wo.weight', 'layers.3.attention.wq.weight', 'layers.3.attention.wv.weight', 'layers.3.attention_norm.weight', 'layers.3.feed_forward.w1.weight', 'layers.3.feed_forward.w2.weight', 'layers.3.feed_forward.w3.weight', 'layers.3.ffn_norm.weight', 'layers.4.attention.wk.weight', 'layers.4.attention.wo.weight', 'layers.4.attention.wq.weight', 'layers.4.attention.wv.weight', 'layers.4.attention_norm.weight', 'layers.4.feed_forward.w1.weight', 'layers.4.feed_forward.w2.weight', 'layers.4.feed_forward.w3.weight', 'layers.4.ffn_norm.weight', 'layers.5.attention.wk.weight', 'layers.5.attention.wo.weight', 'layers.5.attention.wq.weight', 'layers.5.attention.wv.weight', 'layers.5.attention_norm.weight', 'layers.5.feed_forward.w1.weight', 'layers.5.feed_forward.w2.weight', 'layers.5.feed_forward.w3.weight', 'layers.5.ffn_norm.weight', 'layers.6.attention.wk.weight', 'layers.6.attention.wo.weight', 'layers.6.attention.wq.weight', 'layers.6.attention.wv.weight', 'layers.6.attention_norm.weight', 'layers.6.feed_forward.w1.weight', 'layers.6.feed_forward.w2.weight', 'layers.6.feed_forward.w3.weight', 'layers.6.ffn_norm.weight', 'layers.7.attention.wk.weight', 'layers.7.attention.wo.weight', 'layers.7.attention.wq.weight', 'layers.7.attention.wv.weight', 'layers.7.attention_norm.weight', 'layers.7.feed_forward.w1.weight', 'layers.7.feed_forward.w2.weight', 'layers.7.feed_forward.w3.weight', 'layers.7.ffn_norm.weight', 'norm.weight', 'output.weight', 'tok_embeddings.weight']
+```
+
+## TODO: sft 训练到第 5 轮。
+目前第 2 轮。
+
+full_sft_512-202501281935.pth
+
 # 总体步骤
 
 > 2.4 python 1-pretrain.py 执行预训练，得到 pretrain_*.pth 作为预训练的输出权重
@@ -569,6 +618,8 @@ see also https://github.com/jingyaogong/minimind/issues/26#issuecomment-23629380
 https://huggingface.co/docs/transformers/main/chat_templating
 
 https://github.com/jingyaogong/minimind/wiki
+
+https://github.com/HqWu-HITCS/Awesome-Chinese-LLM?tab=readme-ov-file
 
 Quick Links
 
