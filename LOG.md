@@ -661,6 +661,108 @@ class TransformerBlock(nn.Module):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 ```
 
+# Publish model
+
+https://huggingface.co/tclh123/minimind-v1-small/tree/main
+
+run `export_model.py`
+
+Our model inherts transformers.PreTrainedModel, and the LMConfig inherts PretrainedConfig.
+
+```
+from transformers import PreTrainedModel
+from transformers import PretrainedConfig
+```
+
+So we can basically call `save_pretrained` to save the model file in the huggingface/transformers way.
+It will save the model to local directory.
+
+Then you can use `push_to_hub` to push the model to huggingface (it's basically like git push)
+
+## examine the pytorch_model.bin file
+
+```shell
+# strings minimind-v1-small/pytorch_model.bin  | head
+pytorch_model/data.pklFB
+ZZZZZZZZ
+tok_embeddings.weightq
+ctorch._utils
+_rebuild_tensor_v2
+storageq
+ctorch
+FloatStorage
+cpuq
+ccollections
+```
+
+## network issue
+
+```
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/projects/minimind/export_model.py", line 63, in <module>
+    push_to_hf()
+  File "/root/projects/minimind/export_model.py", line 53, in push_to_hf
+    model.push_to_hub("tclh123/minimind-v1-small")
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2822, in push_to_hub
+    return super().push_to_hub(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/utils/hub.py", line 914, in push_to_hub
+    repo_id = self._create_repo(
+              ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/utils/hub.py", line 730, in _create_repo
+    url = create_repo(repo_id=repo_id, token=token, private=private, exist_ok=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 3512, in create_repo
+    r = get_session().post(path, headers=headers, json=json)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/requests/adapters.py", line 507, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/repos/create (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb80652f410>, 'Connection to huggingface.co timed out. (connect timeout=None)'))"), '(Request ID: 98e6ee55-63d3-4ef3-9ba1-8372207c3487)')
+```
+
+## safe_serialization
+
+```
+Traceback (most recent call last):
+  File "/root/projects/minimind/export_model.py", line 63, in <module>
+    push_to_hf()
+  File "/root/projects/minimind/export_model.py", line 53, in push_to_hf
+    model.push_to_hub("tclh123/minimind-v1-small")
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2822, in push_to_hub
+    return super().push_to_hub(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/utils/hub.py", line 930, in push_to_hub
+    self.save_pretrained(work_dir, max_shard_size=max_shard_size, safe_serialization=safe_serialization)
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2701, in save_pretrained
+    raise RuntimeError(
+RuntimeError: The weights trying to be saved contained shared tensors [{'tok_embeddings.weight', 'output.weight'}] that are mismatching the transformers base configuration. Try saving using `safe_serialization=False` or remove this tensor sharing.
+```
+
+## Bus error
+
+```
+# python export_model.py
+Bus error (core dumped)
+```
+
+
 # Others
 
 see also https://github.com/jingyaogong/minimind/issues/26#issuecomment-2362938042

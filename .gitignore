@@ -7,3 +7,5 @@
 /tmp
 *.sw[po]
 __pycache__/
+
+/save_models
